@@ -1,6 +1,6 @@
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const { displayName, description } = require('./package.json');
+const { displayName, description, name } = require('./package.json');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -10,6 +10,11 @@ module.exports = {
 
   siteName: displayName,
   siteDescription: description,
+  siteUrl: `https://riotz.works/${name}`,
+
+  plugins: [
+    { use: '@gridsome/plugin-sitemap' }
+  ],
 
   configureWebpack: {
     plugins: [
