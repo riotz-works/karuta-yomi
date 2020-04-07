@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "gridsome": "^0.7.13",
+    "hard-source-webpack-plugin": "^0.13.1",
     "rimraf": "^3.0.2"
   },
   "browserslist": [
