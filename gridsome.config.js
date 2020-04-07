@@ -13,6 +13,7 @@ module.exports = {
   siteUrl: `https://riotz.works/${name}`,
 
   plugins: [
+    { use: '@gridsome/plugin-google-analytics', options: { id: 'UA-109297390-1' }},
     { use: '@gridsome/plugin-sitemap' }
   ],
 
