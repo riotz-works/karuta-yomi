@@ -1,0 +1,25 @@
+{
+  "name": "karuta-yomi",
+  "displayName": "かるたよみ",
+  "description": "音声合成の読み上げで楽しむ「かるた」取り",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf node_modules/.cache",
+    "setup": "yarn install --ignore-optional"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rimraf": "^3.0.2"
+  },
+  "homepage": "https://github.com/riotz-works/karuta-yomi#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riotz-works/karuta-yomi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/riotz-works/karuta-yomi/issues"
+  },
+  "author": "Riotz.works (https://riotz.works)",
+  "license": "MIT"
+}
