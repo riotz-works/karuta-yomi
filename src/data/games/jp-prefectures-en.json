@@ -1,0 +1,62 @@
+{
+  "no": 502,
+  "title": "都道府県名 英語ジョーク",
+  "description": "日本の都道府県名に使われている漢字を１つ１つ直訳的に英語に置き換えたジョーク表記を読み上げます。",
+  "credits": [
+    {
+      "author": "Collected from social networks"
+    }
+  ],
+  "configuration": {
+    "lang": "en-US"
+  },
+  "cards": [
+    { "no": 1, "text": "North　Sea　Road" },
+    { "no": 2, "text": "Blue　Forest" },
+    { "no": 3, "text": "Rock　Hand" },
+    { "no": 4, "text": "Palace　Castle" },
+    { "no": 5, "text": "Autumn　Rice　Field" },
+    { "no": 6, "text": "Mountain　Shape" },
+    { "no": 7, "text": "Good　Luck　Island" },
+    { "no": 8, "text": "Thorn　Castle" },
+    { "no": 9, "text": "Horse　Chestnut　Tree" },
+    { "no": 10, "text": "Crowd　Horse" },
+    { "no": 11, "text": "Tip　Ball" },
+    { "no": 12, "text": "Thousand　Leaf" },
+    { "no": 13, "text": "East　Capital" },
+    { "no": 14, "text": "God　Apple　River" },
+    { "no": 15, "text": "New　Lagoon" },
+    { "no": 16, "text": "Rich　Mountain" },
+    { "no": 17, "text": "Stone　River" },
+    { "no": 18, "text": "Good　Luck　Well" },
+    { "no": 19, "text": "Mountain　Pear" },
+    { "no": 20, "text": "Long　Field" },
+    { "no": 21, "text": "Divergence　Hill" },
+    { "no": 22, "text": "Silent　Hill" },
+    { "no": 23, "text": "Love　Wisdom" },
+    { "no": 24, "text": "Triple" },
+    { "no": 25, "text": "Overgrown　With　Celebratio" },
+    { "no": 26, "text": "Capital　Capital" },
+    { "no": 27, "text": "Big　Slope" },
+    { "no": 28, "text": "Soldier　Storehouse" },
+    { "no": 29, "text": "Apple　Good" },
+    { "no": 30, "text": "Total　Song　Mountain" },
+    { "no": 31, "text": "Bird　Get" },
+    { "no": 32, "text": "Island　Root" },
+    { "no": 33, "text": "Hill　Mountain" },
+    { "no": 34, "text": "Large　Island" },
+    { "no": 35, "text": "Mountain　Mouth" },
+    { "no": 36, "text": "Virtuous　Island" },
+    { "no": 37, "text": "Fragrance　River" },
+    { "no": 38, "text": "Love　Princess" },
+    { "no": 39, "text": "High　Wisdom" },
+    { "no": 40, "text": "Good　Luck　Hill" },
+    { "no": 41, "text": "Support　Celebration" },
+    { "no": 42, "text": "Long　Cape" },
+    { "no": 43, "text": "Bear　Book" },
+    { "no": 44, "text": "Big　Mimute" },
+    { "no": 45, "text": "Palace　Cape" },
+    { "no": 46, "text": "Deer　Child　Island" },
+    { "no": 47, "text": "Offing　Rope" }
+  ]
+}
