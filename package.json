@@ -5,13 +5,23 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rimraf node_modules/.cache",
-    "setup": "yarn install --ignore-optional"
+    "clean": "rimraf node_modules/.cache .cache src/.temp dist",
+    "setup": "yarn install --ignore-optional",
+    "dev": "gridsome develop",
+    "build": "gridsome build",
+    "explore": "gridsome explore"
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
+    "gridsome": "^0.7.13",
     "rimraf": "^3.0.2"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "homepage": "https://github.com/riotz-works/karuta-yomi#readme",
   "repository": {
     "type": "git",
