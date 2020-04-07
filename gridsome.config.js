@@ -1,3 +1,5 @@
+/* eslint-disable no-process-env */                 // 'cuz configuration file and requires environment variables
+/* eslint-disable @typescript-eslint/camelcase */   // 'cuz key name of configuration is specified
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { displayName, description, name } = require('./package.json');
@@ -19,6 +21,11 @@ module.exports = {
   ],
 
   configureWebpack: {
+    module: {
+      rules: [
+        { test: /\.(?:js|ts|vue)$/u, loader: 'eslint-loader' }
+      ]
+    },
     plugins: [
       ...production ? [] : [ new HardSourceWebpackPlugin() ]
     ],
