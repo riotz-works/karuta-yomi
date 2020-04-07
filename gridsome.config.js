@@ -14,7 +14,8 @@ module.exports = {
 
   plugins: [
     { use: '@gridsome/plugin-google-analytics', options: { id: 'UA-109297390-1' }},
-    { use: '@gridsome/plugin-sitemap' }
+    { use: '@gridsome/plugin-sitemap' },
+    { use: 'gridsome-plugin-typescript' }
   ],
 
   configureWebpack: {
