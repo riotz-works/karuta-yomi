@@ -15,6 +15,7 @@ module.exports = {
   siteName: displayName,
   siteDescription: description,
   siteUrl: `https://riotz.works/${name}`,
+  icon: './src/assets/app-icon.png',
 
   css: {
     loaderOptions: {

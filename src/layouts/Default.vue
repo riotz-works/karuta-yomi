@@ -1,15 +1,23 @@
 <template>
-  <div class="layout">
+  <v-app id="app" :style="wallpaper">
 
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-    </header>
+    <v-app-bar id="app-header" app flat fixed color="transparent">
+      <g-link to="/"><g-image src="~/assets/app-icon.png" width="54" /></g-link>
+      <v-toolbar-title>
+        <g-link to="/"><h1 class="display-4">{{ $static.metadata.siteName }}</h1></g-link>
+      </v-toolbar-title>
+    </v-app-bar>
 
-    <slot />
+    <v-content>
+      <slot />
+    </v-content>
 
-  </div>
+    <v-footer id="app-footer" app flat fixed color="transparent">
+      <v-spacer />
+      <small>© Since {{ inceptionYear }} <a href="https://riotz.works/">Riotz.works</a></small>
+    </v-footer>
+
+  </v-app>
 </template>
 
 
@@ -20,3 +28,64 @@
     }
   }
 </static-query>
+
+
+<script lang="ts">
+import Vue from 'vue';
+import { Consts } from '~/config';
+
+const home = require('~/assets/wallpaper/home.jpg');
+
+
+export default Vue.extend({
+  computed: {
+    inceptionYear: (): number => Consts.INCEPTION_YEAR,
+    wallpaper(): object {
+      return { background: `url('${home}') center top / cover no-repeat fixed` };
+    }
+  },
+  metaInfo() {
+    return {
+      titleTemplate: (chunk): string => chunk !== Consts.DISPLAY_NAME ? `${chunk} | ${Consts.DISPLAY_NAME}` : Consts.DISPLAY_NAME
+    };
+  }
+});
+</script>
+
+
+<style lang="scss">
+#app {
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before{
+    background: inherit;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    content: '';
+    filter: blur(4px);
+  }
+}
+
+#app-header {
+  h1 {
+    padding: 0 3px;
+  }
+  img {
+    padding: 3px 0 0 0;
+  }
+}
+
+#app-footer {
+  a {
+    color: inherit;
+  }
+}
+</style>
