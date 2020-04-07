@@ -9,7 +9,9 @@
     "setup": "yarn install --ignore-optional",
     "dev": "gridsome develop",
     "build": "gridsome build",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "lint": "eslint . --ext .js,.ts,.vue --ignore-path .gitignore",
+    "lint:fix": "yarn lint --fix"
   },
   "dependencies": {
     "vue": "^2.6.11"
@@ -18,13 +20,20 @@
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@types/node": "^13.11.0",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-gridsome": "^1.4.1",
+    "eslint-plugin-vue": "^6.2.2",
     "gridsome": "^0.7.13",
     "gridsome-plugin-typescript": "^0.4.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "rimraf": "^3.0.2",
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "vue-eslint-parser": "^7.0.0"
   },
   "browserslist": [
     "> 1%",
