@@ -17,7 +17,8 @@
   "devDependencies": {
     "gridsome": "^0.7.13",
     "hard-source-webpack-plugin": "^0.13.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^2.3.5"
   },
   "browserslist": [
     "> 1%",
