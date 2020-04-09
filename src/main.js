@@ -13,6 +13,19 @@ export default function(Vue, { appOptions, head }) {
 
   Vue.use(Vuetify);
   appOptions.vuetify = new Vuetify({
+    theme: {
+      themes: {
+        light: {
+          primary: '#00552E',
+          secondary: '#333631',
+          accent: '#1853B5',
+          error: '#F73B70',
+          info: '#007BBB',
+          success: '#7B8D42',
+          warning: '#EE7800'
+        }
+      }
+    },
     icons: {
       values: {
         home: 'uil-home-alt',
