@@ -21,8 +21,20 @@
             <v-col cols="6"><v-switch v-model="config.random" dense :label="`${config.random ? 'ランダム' : 'シーケンス'}`" class="switch" /></v-col>
             <v-col cols="6"><v-switch v-model="config.read" dense :label="`${config.read ? '読み補正' : '表記読み'}`" :disabled="!config.readable" class="switch" /></v-col>
           </v-row>
-          <v-row><v-col cols="12"><v-btn depressed small width="100%" color="primary">開始！</v-btn></v-col></v-row>
+          <v-row><v-col cols="12"><v-btn depressed small width="100%" color="primary" @click="start">開始！</v-btn></v-col></v-row>
         </v-form>
+      </section>
+
+      <section v-if="mode === 'play'" id="play">
+        <v-card raised hover :ripple="false" class="card mx-auto" @click="skip()">
+          <g-image src="~/assets/image/card-design.jpg" />
+          <v-card-title class="text">{{ card.text.replace(/[\u{3000}]/ug, '\n') }}</v-card-title>
+        </v-card>
+        <v-row class="actions">
+          <v-col cols="6"><v-btn outlined block color="primary" @click="skip()">つぎ！</v-btn></v-col>
+          <v-col v-if="!field.paused" cols="6"><v-btn outlined block color="secondary" @click="pause()">まった</v-btn></v-col>
+          <v-col v-if="field.paused && field.resumable" cols="6"><v-btn outlined block @click="resume()">つづき</v-btn></v-col>
+        </v-row>
       </section>
 
     </v-container>
@@ -67,10 +79,44 @@ import { Card, Game } from '~/vendors/types';
 export default Vue.extend({
   data: () => ({
     mode: 'prep',
-    config: {} as Config
+    config: {} as Config,
+    field: {} as Field,
+    card: undefined as Card | undefined
   }),
   mounted() {
     this.config = new Config(this.$page.game);
+    this.field = new Field(this.config, this.$page.game);
+  },
+  destroyed() {
+    this.field.destroy();
+  },
+  methods: {
+    start(): void {
+      this.mode = 'play';
+      this.reset();
+      this.next();
+    },
+    next(): void {
+      this.card = this.field.openCard();
+      if (!this.card) {
+        this.mode = 'done';
+        return;
+      }
+      this.field.readAloud(this.card, this.config, this.next);
+    },
+    skip(): void {
+      this.field.skip(this.next);
+    },
+    pause(): void {
+      this.field.pause();
+    },
+    resume(): void {
+      this.field.resume(this.next);
+    },
+    reset(): void {
+      this.field.destroy();
+      this.field = new Field(this.config, this.$page.game);
+    }
   },
   metaInfo() {
     return {
@@ -104,6 +150,107 @@ class Config {
     this.read = this.readable;
   }
 }
+
+class Field {
+  private library: Card[];
+
+  private index = -1;
+  private timerId = 0;
+  private synthesisPaused = false;
+  private status: 'open' | 'interval' | 'skip' | 'pause' | 'paused' | 'done' = 'open';
+
+  constructor(config: Config, game: Game) {
+    addEventListener('beforeunload', () => { speechSynthesis.cancel(); });
+    const cards = config.random ? shuffle(game.cards) : game.cards;
+    this.library = game.introduction ? [ game.introduction, ...cards ] : cards;
+    if (config.count) {
+      this.library.length = config.count + (game.introduction ? 1 : 0);
+    }
+  }
+
+  get paused(): boolean { return this.status === 'pause' || this.status === 'paused'; }
+  get resumable(): boolean { return this.synthesisPaused; }
+
+  openCard(): Card | undefined {
+    if (this.library.length <= ++this.index) {
+      return undefined;
+    }
+    this.status = 'open';
+    return this.library[this.index];
+  }
+
+  readAloud(card: Card, config: Config, onend: () => void): void {
+    speechSynthesis.cancel();
+    const synth = this.createSynth(card, config, (): void => {
+      if (this.status === 'pause' || this.status === 'done') {
+        this.status = 'paused';
+      } else if (this.status === 'skip') {
+        onend();
+      } else {
+        this.status = 'interval';
+        this.timerId = setTimeout(onend, config.interval * 1000);
+      }
+    });
+    speechSynthesis.speak(synth);
+  }
+
+  skip(next: () => void): void {
+    clearTimeout(this.timerId);
+    if (this.status === 'interval' || this.status === 'paused') {
+      return next();
+    }
+    this.status = 'skip';
+    return speechSynthesis.cancel();
+  }
+
+  pause(): void {
+    clearTimeout(this.timerId);
+    speechSynthesis.pause();
+    if (this.status === 'interval') {
+      this.status = 'paused';
+    } else {
+      this.status = 'pause';
+    }
+  }
+
+  resume(next: () => void): void {
+    if (this.status === 'paused') {
+      return next();
+    }
+    this.status = 'open';
+    return speechSynthesis.resume();
+  }
+
+  destroy(): void {
+    this.status = 'done';
+    clearTimeout(this.timerId);
+    speechSynthesis.cancel();
+  }
+
+  private createSynth(card: Card, config: Config, onend: () => void): SpeechSynthesisUtterance {
+    const synthesis = new SpeechSynthesisUtterance();
+    synthesis.text = config.read ? card.read || card.text : card.text;
+    synthesis.lang = config.lang;
+    synthesis.rate = config.rate / 10;
+    synthesis.pitch = config.pitch / 10;
+    synthesis.volume = Consts.SYNTH.VOLUME;
+    synthesis.onend = onend;
+    synthesis.onpause = (): void => {
+      this.synthesisPaused = speechSynthesis.paused;
+    };
+    return synthesis;
+  }
+}
+
+/* eslint-disable no-plusplus */  // 'cuz Fisher–Yates shuffle algorithm
+const shuffle = <T> (array: Array<T>): Array<T> => {
+  const list = array.slice();
+  for (let i = list.length - 1; 0 < i; i--) {
+    const r = Math.floor(Math.random() * (i + 1));
+    [ list[i], list[r] ] = [ list[r], list[i] ];
+  }
+  return list;
+};
 </script>
 
 
@@ -138,6 +285,44 @@ class Config {
       margin-top: 0;
       margin-bottom: 12px;
     }
+  }
+}
+
+#play {
+  .card {
+    background: #FFF;
+    border: 12px solid;
+    padding: 16px;
+    margin-top: 20px;
+    height: calc(100% - 180px);
+    width: 95%;
+    transform: rotate(-2deg);
+    writing-mode: vertical-rl;
+    position: relative;
+
+    .text {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: 10vw;
+      letter-spacing: .14em;
+      line-height: 1.2em;
+      white-space: pre;
+      word-break: break-all;
+      word-wrap: break-word;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .actions {
+    padding-top: 12px;
   }
 }
 </style>
