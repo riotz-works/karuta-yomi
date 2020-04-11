@@ -6,5 +6,12 @@ export const Consts = Object.freeze({
   DESCRIPTION: pkg.description,
   VERSION: pkg.version,
 
-  INCEPTION_YEAR: 2020
+  INCEPTION_YEAR: 2020,
+
+  SYNTH: {
+    INTERVAL: 3,
+    RATE: 10,
+    PITCH: 10,
+    VOLUME: 1.0
+  }
 });
