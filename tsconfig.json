@@ -43,7 +43,8 @@
     /* Type declaration files to be included in compilation. */
     "types": [
       "@types/node",
-      "vue-meta"
+      "vue-meta",
+      "./src/vendors/types"
     ]
   }
 }

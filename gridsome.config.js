@@ -41,6 +41,10 @@ module.exports = {
     }
   ],
 
+  templates: {
+    Game: '/stages/:fileInfo__name'
+  },
+
   configureWebpack: {
     module: {
       rules: [
