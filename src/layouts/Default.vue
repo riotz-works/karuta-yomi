@@ -51,17 +51,18 @@ import { Consts } from '~/config';
 const home = require('~/assets/wallpaper/home.jpg');
 const prep = require('~/assets/wallpaper/prep.jpg');
 const play = require('~/assets/wallpaper/play.jpg');
+const info = require('~/assets/wallpaper/info.jpg');
 
 
 export default Vue.extend({
   props: {
-    mode: { type: String as PropType<'prep'|'play'|'done'>, required: false, default: '' }
+    mode: { type: String as PropType<'prep'|'play'|'done'|'info'>, required: false, default: '' }
   },
   computed: {
     inceptionYear: (): number => Consts.INCEPTION_YEAR,
     menu: (): { name: string; icon: string; action: string }[] => [
       { name: 'Home', icon: '$home', action: '/' },
-      { name: 'About', icon: '$about', action: '/' }
+      { name: 'About', icon: '$about', action: '/about' }
     ],
     wallpaper(): object {
       let image = home;
@@ -69,6 +70,8 @@ export default Vue.extend({
         image = prep;
       } else if (this.mode === 'play' || this.mode === 'done') {
         image = play;
+      } else if (this.mode === 'info') {
+        image = info;
       }
       return { background: `url('${image}') center top / cover no-repeat fixed` };
     }
@@ -102,6 +105,7 @@ export default Vue.extend({
     filter: blur(4px);
   }
 }
+
 #app-header {
   h1 {
     padding: 0 3px;
@@ -114,13 +118,13 @@ export default Vue.extend({
   }
 }
 
+.menu a {
+  padding: 0 20px 0 10px;
+}
+
 #app-footer {
   a {
     color: inherit;
   }
-}
-
-.menu a {
-  padding: 0 20px 0 10px;
 }
 </style>
