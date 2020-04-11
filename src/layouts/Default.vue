@@ -41,7 +41,7 @@ const play = require('~/assets/wallpaper/play.jpg');
 
 export default Vue.extend({
   props: {
-    mode: { type: String as PropType<'prep'|'play'>, required: false, default: '' }
+    mode: { type: String as PropType<'prep'|'play'|'done'>, required: false, default: '' }
   },
   computed: {
     inceptionYear: (): number => Consts.INCEPTION_YEAR,
@@ -49,7 +49,7 @@ export default Vue.extend({
       let image = home;
       if (this.mode === 'prep') {
         image = prep;
-      } else if (this.mode === 'play') {
+      } else if (this.mode === 'play' || this.mode === 'done') {
         image = play;
       }
       return { background: `url('${image}') center top / cover no-repeat fixed` };
