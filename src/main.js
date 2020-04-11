@@ -29,7 +29,8 @@ export default function(Vue, { appOptions, head }) {
     icons: {
       values: {
         home: 'uil-home-alt',
-        about: 'uil-info-circle'
+        about: 'uil-info-circle',
+        cards: 'uil-layer-group'
       }
     }
   });
