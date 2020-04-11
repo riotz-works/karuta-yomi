@@ -31,7 +31,14 @@ module.exports = {
   plugins: [
     { use: '@gridsome/plugin-google-analytics', options: { id: 'UA-109297390-1' }},
     { use: '@gridsome/plugin-sitemap' },
-    { use: 'gridsome-plugin-typescript' }
+    { use: 'gridsome-plugin-typescript' },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Game',
+        path: './src/data/games/*.json'
+      }
+    }
   ],
 
   configureWebpack: {
