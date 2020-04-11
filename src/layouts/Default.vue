@@ -6,6 +6,20 @@
       <v-toolbar-title>
         <g-link to="/"><h1 class="display-4">{{ $static.metadata.siteName }}</h1></g-link>
       </v-toolbar-title>
+      <v-spacer />
+      <div class="actions">
+        <v-menu left offset-x nudge-left="-8">
+          <template v-slot:activator="{ on }">
+            <v-btn icon v-on="on"><v-icon>$menu</v-icon></v-btn>
+          </template>
+          <v-list dense class="menu">
+            <v-list-item v-for="(item, i) in menu" :key="i" gridsome :to="item.action">
+              <v-icon>{{ item.icon }}</v-icon>
+              <v-list-item-title>{{ item.name }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+      </div>
     </v-app-bar>
 
     <v-content>
@@ -45,6 +59,10 @@ export default Vue.extend({
   },
   computed: {
     inceptionYear: (): number => Consts.INCEPTION_YEAR,
+    menu: (): { name: string; icon: string; action: string }[] => [
+      { name: 'Home', icon: '$home', action: '/' },
+      { name: 'About', icon: '$about', action: '/' }
+    ],
     wallpaper(): object {
       let image = home;
       if (this.mode === 'prep') {
@@ -84,7 +102,6 @@ export default Vue.extend({
     filter: blur(4px);
   }
 }
-
 #app-header {
   h1 {
     padding: 0 3px;
@@ -92,11 +109,18 @@ export default Vue.extend({
   img {
     padding: 3px 0 0 0;
   }
+  .actions {
+    padding-right: 2px;
+  }
 }
 
 #app-footer {
   a {
     color: inherit;
   }
+}
+
+.menu a {
+  padding: 0 20px 0 10px;
 }
 </style>
