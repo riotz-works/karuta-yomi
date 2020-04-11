@@ -11,7 +11,8 @@
     "build": "gridsome build",
     "explore": "gridsome explore",
     "lint": "eslint . --ext .js,.ts,.vue --ignore-path .gitignore",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "deploy": "gh-pages -d dist -b master -m 'Update Site [ci skip]'"
   },
   "dependencies": {
     "vue": "^2.6.11",
@@ -30,6 +31,7 @@
     "eslint-plugin-gridsome": "^1.4.1",
     "eslint-plugin-vue": "^6.2.2",
     "fibers": "^4.0.2",
+    "gh-pages": "^2.2.0",
     "gridsome": "^0.7.13",
     "gridsome-plugin-typescript": "^0.4.0",
     "hard-source-webpack-plugin": "^0.13.1",
