@@ -31,17 +31,25 @@
 
 
 <script lang="ts">
-import Vue from 'vue';
+import Vue, { PropType } from 'vue';
 import { Consts } from '~/config';
 
 const home = require('~/assets/wallpaper/home.jpg');
+const prep = require('~/assets/wallpaper/prep.jpg');
 
 
 export default Vue.extend({
+  props: {
+    mode: { type: String as PropType<'prep'>, required: false, default: '' }
+  },
   computed: {
     inceptionYear: (): number => Consts.INCEPTION_YEAR,
     wallpaper(): object {
-      return { background: `url('${home}') center top / cover no-repeat fixed` };
+      let image = home;
+      if (this.mode === 'prep') {
+        image = prep;
+      }
+      return { background: `url('${image}') center top / cover no-repeat fixed` };
     }
   },
   metaInfo() {
