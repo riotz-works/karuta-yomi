@@ -28,6 +28,7 @@ export default function(Vue, { appOptions, head }) {
     },
     icons: {
       values: {
+        menu: 'uil-ellipsis-v',
         home: 'uil-home-alt',
         about: 'uil-info-circle',
         cards: 'uil-layer-group'
