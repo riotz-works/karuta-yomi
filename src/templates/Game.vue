@@ -37,6 +37,18 @@
         </v-row>
       </section>
 
+      <section v-if="mode === 'done'" id="done" class="contents">
+        <h2 class="display-3">終了</h2>
+        <v-container>
+          <v-row justify="center">
+            <v-col cols="10"><v-btn x-large block color="primary" class="font-weight-black" @click="start()">もぅ いっかい！！</v-btn></v-col>
+          </v-row>
+          <v-row justify="center">
+            <v-col cols="10"><v-btn outlined block color="secondary" gridsome to="/">やめる</v-btn></v-col>
+          </v-row>
+        </v-container>
+      </section>
+
     </v-container>
   </Layout>
 </template>
@@ -323,6 +335,17 @@ const shuffle = <T> (array: Array<T>): Array<T> => {
 
   .actions {
     padding-top: 12px;
+  }
+}
+
+#done {
+  background: none;
+  text-align: center;
+  padding-top: 50%;
+
+  h2 {
+    font-size: 96px !important;
+    padding-bottom: 32px;
   }
 }
 </style>
