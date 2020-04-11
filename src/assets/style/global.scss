@@ -9,3 +9,11 @@ a {
 .container {
   height: 100%;
 }
+
+.contents {
+  background-color: rgba(255, 255, 255, .4);
+  border-radius: 10px;
+  padding: 8px;
+  height: calc(100% - 50px);
+  overflow: auto;
+}
