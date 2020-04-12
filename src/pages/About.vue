@@ -20,7 +20,7 @@
           </p>
         </div>
 
-        <h3>利用している画像素材</h3>
+        <h3>利用している素材</h3>
         <p>
           <ul>
             <li><a href="https://www.photo-ac.com/main/detail/3195277">百人一首 - No: 3195277｜写真AC</a></li>
@@ -28,19 +28,10 @@
             <li><a href="https://www.photo-ac.com/main/detail/1943255">雲龍院別院 - No: 1943255｜写真AC</a></li>
             <li><a href="https://www.photo-ac.com/main/detail/3156592">貼りたての畳 - No: 3156592｜写真AC</a></li>
             <li><a href="https://pixabay.com/ja/illustrations/%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8-%E6%9C%A8%E7%89%88%E5%8D%B0%E5%88%B7-%E6%9C%A8%E7%89%88%E7%94%BB-%E6%B3%A2-1247354/">イメージ 木版印刷 木版画 - Pixabay</a></li>
-          </ul>
-        </p>
-
-        <h3>利用している色情報</h3>
-        <p>
-          <ul>
+            <li><a href="https://pocket-se.info/archives/1309/">和風の勝利ジングル – ポケットサウンド</a></li>
             <li><a href="https://irononamae.web.fc2.com/wa/">和の色 - 色の名前と色見本</a></li>
+            <li>※ 読札のテキストデータは設定画面に記載</li>
           </ul>
-        </p>
-
-        <h3>利用している読札データ</h3>
-        <p>
-          各カルタの読み上げ設定画面に記載<br>
         </p>
 
         <h3>プライバシーポリシー</h3>

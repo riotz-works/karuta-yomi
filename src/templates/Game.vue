@@ -89,6 +89,8 @@ import Vue from 'vue';
 import { Consts } from '~/config';
 import { Card, Game } from '~/vendors/types';
 
+const finish = require('~/assets/sound/finish.mp3');
+
 export default Vue.extend({
   data: () => ({
     mode: 'prep',
@@ -201,6 +203,10 @@ class Field {
   private synthesisPaused = false;
   private status: 'open' | 'interval' | 'skip' | 'pause' | 'paused' | 'done' = 'open';
 
+  private sounds = {
+    finish: new Audio(finish)
+  }
+
   constructor(config: Config, game: Game) {
     addEventListener('beforeunload', () => { speechSynthesis.cancel(); });
     const cards = config.random ? shuffle(game.cards) : game.cards;
@@ -215,6 +221,8 @@ class Field {
 
   openCard(): Card | undefined {
     if (this.library.length <= ++this.index) {
+      this.status = 'done';
+      this.play(this.sounds.finish);
       return undefined;
     }
     this.status = 'open';
@@ -282,6 +290,13 @@ class Field {
       this.synthesisPaused = speechSynthesis.paused;
     };
     return synthesis;
+  }
+
+  private play(audio: HTMLAudioElement): void {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = 0.05;
+    audio.play();
   }
 }
 
