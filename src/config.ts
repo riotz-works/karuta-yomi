@@ -6,6 +6,7 @@ export const Consts = Object.freeze({
   DESCRIPTION: pkg.description,
   VERSION: pkg.version,
 
+  APP_HOST: 'https://riotz.works',
   INCEPTION_YEAR: 2020,
 
   SYNTH: {
