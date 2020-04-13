@@ -28,7 +28,7 @@
 
     <v-footer id="app-footer" app flat fixed color="transparent">
       <v-spacer />
-      <small>© Since {{ inceptionYear }} <a href="https://riotz.works/">Riotz.works</a></small>
+      <small>© Since {{ inceptionYear }} <a :href="url">Riotz.works</a></small>
     </v-footer>
 
   </v-app>
@@ -48,6 +48,7 @@
 import Vue, { PropType } from 'vue';
 import { Consts } from '~/config';
 
+const logo = require('~/assets/app-icon.png');
 const home = require('~/assets/wallpaper/home.jpg');
 const prep = require('~/assets/wallpaper/prep.jpg');
 const play = require('~/assets/wallpaper/play.jpg');
@@ -59,6 +60,7 @@ export default Vue.extend({
     mode: { type: String as PropType<'prep'|'play'|'done'|'info'>, required: false, default: '' }
   },
   computed: {
+    url: (): string => Consts.APP_HOST,
     inceptionYear: (): number => Consts.INCEPTION_YEAR,
     menu: (): { name: string; icon: string; action: string }[] => [
       { name: 'Home', icon: '$home', action: '/' },
@@ -78,7 +80,24 @@ export default Vue.extend({
   },
   metaInfo() {
     return {
-      titleTemplate: (chunk): string => chunk !== Consts.DISPLAY_NAME ? `${chunk} | ${Consts.DISPLAY_NAME}` : Consts.DISPLAY_NAME
+      titleTemplate: (chunk): string => chunk !== Consts.DISPLAY_NAME ? `${chunk} | ${Consts.DISPLAY_NAME}` : Consts.DISPLAY_NAME,
+      meta: [
+        { key: 'description', name: 'description', template: (chunk: string): string => chunk ? `${Consts.DESCRIPTION} - ${chunk}` : Consts.DESCRIPTION },
+
+        { key: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        { key: 'twitter:creator', name: 'twitter:creator', content: '@riotz_works' },
+        { key: 'twitter:site', name: 'twitter:site', content: Consts.APP_HOST },
+        { key: 'twitter:image', name: 'twitter:image:src', content: `${Consts.APP_HOST}${logo}` },
+        { key: 'twitter:title', name: 'twitter:title', template: (chunk: string): string => chunk ? `${chunk} | ${Consts.DISPLAY_NAME}` : Consts.DISPLAY_NAME },
+        { key: 'twitter:description', name: 'twitter:description', template: (chunk: string): string => chunk ? `${Consts.DESCRIPTION} - ${chunk}` : Consts.DESCRIPTION },
+
+        { key: 'og:type', property: 'og:type', content: 'website' },
+        { key: 'og:site_name', property: 'og:site_name', content: Consts.DISPLAY_NAME },
+        { key: 'og:url', property: 'og:url', content: Consts.APP_HOST },
+        { key: 'og:image', property: 'og:image', content: `${Consts.APP_HOST}${logo}` },
+        { key: 'og:title', property: 'og:title', template: (chunk: string): string => chunk ? `${chunk} | ${Consts.DISPLAY_NAME}` : Consts.DISPLAY_NAME },
+        { key: 'og:description', property: 'og:description', template: (chunk: string): string => chunk ? `${Consts.DESCRIPTION} - ${chunk}` : Consts.DESCRIPTION }
+      ] as never
     };
   }
 });

@@ -64,6 +64,24 @@
 </template>
 
 
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  metaInfo() {
+    const title = 'About';
+    return {
+      title,
+      meta: [
+        { key: 'twitter:title', content: title, template: true },
+        { key: 'og:title', content: title, template: true }
+      ] as never
+    };
+  }
+});
+</script>
+
+
 <style lang="scss" scoped>
 ul {
   list-style-type: none;
