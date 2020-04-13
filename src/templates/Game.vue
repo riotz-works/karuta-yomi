@@ -21,6 +21,7 @@
             <v-col cols="6"><v-switch v-model="config.random" dense :label="`${config.random ? 'ランダム' : 'シーケンス'}`" class="switch" /></v-col>
             <v-col cols="6"><v-switch v-model="config.read" dense :label="`${config.read ? '読み補正' : '表記読み'}`" :disabled="!config.readable" class="switch" /></v-col>
           </v-row>
+          <v-row><v-col cols="12"><v-select v-model="config.voiceIndex" :items="config.voices" dense label="音声" /></v-col></v-row>
           <v-row><v-col cols="12"><v-btn depressed small width="100%" color="primary" @click="start">開始！</v-btn></v-col></v-row>
         </v-form>
       </section>
@@ -155,6 +156,9 @@ class Config {
   rate: number;
   pitch: number;
 
+  voiceIndex = 0;
+  voices: SpeechSynthesisVoiceItem[] = [];
+
   random = true;
   read: boolean;
   readable: boolean;
@@ -167,9 +171,26 @@ class Config {
     this.rate = game.configuration?.rate || Consts.SYNTH.RATE;
     this.pitch = game.configuration?.pitch || Consts.SYNTH.PITCH;
 
+    this.createVoices();
+    speechSynthesis.onvoiceschanged = (): void => this.createVoices();
+
     this.readable = game.cards.find((card: Card) => card.read) !== undefined;
     this.read = this.readable;
   }
+
+  private createVoices(): void {
+    this.voices = speechSynthesis.getVoices()
+      .filter((voice: SpeechSynthesisVoice) => voice.lang.match(`${this.lang}|${this.lang.replace('-', '_')}`))
+      .map((voice: SpeechSynthesisVoice, index: number) => {
+        const item = voice as SpeechSynthesisVoiceItem;
+        if (item.default) { this.voiceIndex = index; }
+        item.text = voice.name;
+        item.value = index;
+        return item;
+      }) as SpeechSynthesisVoiceItem[];
+  }
+
+  get voice(): SpeechSynthesisVoiceItem { return this.voices[this.voiceIndex]; }
 }
 
 class Field {
@@ -254,6 +275,7 @@ class Field {
     synthesis.lang = config.lang;
     synthesis.rate = config.rate / 10;
     synthesis.pitch = config.pitch / 10;
+    synthesis.voice = config.voice;
     synthesis.volume = Consts.SYNTH.VOLUME;
     synthesis.onend = onend;
     synthesis.onpause = (): void => {
@@ -272,6 +294,11 @@ const shuffle = <T> (array: Array<T>): Array<T> => {
   }
   return list;
 };
+
+type SpeechSynthesisVoiceItem = SpeechSynthesisVoice & {
+  text: string;
+  value: number;
+}
 </script>
 
 
@@ -288,7 +315,7 @@ const shuffle = <T> (array: Array<T>): Array<T> => {
   }
 
   .description {
-    height: calc(100% - 280px);
+    height: calc(100% - 320px);
     overflow: auto;
     white-space: pre-wrap;
     .credits {
