@@ -131,8 +131,17 @@ export default Vue.extend({
     }
   },
   metaInfo() {
+    const title = this.$page.game.title;
+    const description = this.$page.game.description;
     return {
-      title: this.$page.game.title
+      title,
+      meta: [
+        { key: 'description', content: description, template: true },
+        { key: 'twitter:title', content: title, template: true },
+        { key: 'twitter:description', content: description, template: true },
+        { key: 'og:title', content: title, template: true },
+        { key: 'og:description', content: description, template: true }
+      ] as never
     };
   }
 });
