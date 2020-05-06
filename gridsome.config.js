@@ -4,7 +4,7 @@ const Fiber = require('fibers');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin');
-const { displayName, description, name } = require('./package.json');
+const { appHost, displayName, description, name } = require('./package.json');
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -14,7 +14,7 @@ module.exports = {
 
   siteName: displayName,
   siteDescription: description,
-  siteUrl: `https://riotz.works/${name}`,
+  siteUrl: `${appHost}/${name}`,
   pathPrefix: `/${name}`,
   icon: './src/assets/app-icon.png',
 

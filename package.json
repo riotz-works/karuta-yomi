@@ -2,6 +2,7 @@
   "name": "karuta-yomi",
   "displayName": "かるたよみ",
   "description": "音声合成の読み上げで楽しむ「かるた」取り",
+  "appHost": "https://riotz.works",
   "version": "0.0.1",
   "private": true,
   "scripts": {
