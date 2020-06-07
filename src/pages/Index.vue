@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout class="Index">
     <v-container>
 
       <section class="contents">

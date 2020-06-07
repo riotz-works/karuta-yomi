@@ -1,5 +1,5 @@
 <template>
-  <Layout :mode="mode">
+  <Layout :mode="mode" class="Game">
     <v-container>
 
       <section v-if="mode === 'prep'" id="prep" class="contents">
@@ -318,85 +318,87 @@ type SpeechSynthesisVoiceItem = SpeechSynthesisVoice & {
 
 
 <style lang="scss" scoped>
-#prep {
-  form {
-    padding: 32px 8px 4px;
+.Game {
+  #prep {
+    form {
+      padding: 32px 8px 4px;
+    }
+
+    h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .description {
+      height: calc(100% - 320px);
+      overflow: auto;
+      white-space: pre-wrap;
+      .credits {
+        padding-top: 12px;
+        text-align: right;
+      }
+    }
+
+    .row {
+      padding: 0 4px;
+    }
+    .col {
+      padding: 0 2px;
+      .switch {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+    }
   }
 
-  h2 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  #play {
+    .card {
+      background: #FFF;
+      border: 12px solid;
+      padding: 16px;
+      margin-top: 20px;
+      height: calc(100% - 180px);
+      width: 95%;
+      transform: rotate(-2deg);
+      writing-mode: vertical-rl;
+      position: relative;
 
-  .description {
-    height: calc(100% - 320px);
-    overflow: auto;
-    white-space: pre-wrap;
-    .credits {
+      .text {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        font-size: 10vw;
+        letter-spacing: .14em;
+        line-height: 1.2em;
+        white-space: pre;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .actions {
       padding-top: 12px;
-      text-align: right;
     }
   }
 
-  .row {
-    padding: 0 4px;
-  }
-  .col {
-    padding: 0 2px;
-    .switch {
-      margin-top: 0;
-      margin-bottom: 12px;
+  #done {
+    background: none;
+    text-align: center;
+    padding-top: 50%;
+
+    h2 {
+      font-size: 96px !important;
+      padding-bottom: 32px;
     }
-  }
-}
-
-#play {
-  .card {
-    background: #FFF;
-    border: 12px solid;
-    padding: 16px;
-    margin-top: 20px;
-    height: calc(100% - 180px);
-    width: 95%;
-    transform: rotate(-2deg);
-    writing-mode: vertical-rl;
-    position: relative;
-
-    .text {
-      position: absolute;
-      top: 10px;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      font-size: 10vw;
-      letter-spacing: .14em;
-      line-height: 1.2em;
-      white-space: pre;
-      word-break: break-all;
-      word-wrap: break-word;
-    }
-
-    img {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    }
-  }
-
-  .actions {
-    padding-top: 12px;
-  }
-}
-
-#done {
-  background: none;
-  text-align: center;
-  padding-top: 50%;
-
-  h2 {
-    font-size: 96px !important;
-    padding-bottom: 32px;
   }
 }
 </style>
