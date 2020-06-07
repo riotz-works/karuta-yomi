@@ -1,5 +1,5 @@
 <template>
-  <Layout mode="info">
+  <Layout mode="info" class="About">
     <v-container class="contents">
 
       <section style="height: 0">
@@ -74,17 +74,19 @@ export default Vue.extend({
 
 
 <style lang="scss" scoped>
-ul {
-  list-style-type: none;
-  padding-left: 0;
-  li {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.About {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
-}
 
-hr {
-  margin: 8px 0;
+  hr {
+    margin: 8px 0;
+  }
 }
 </style>
