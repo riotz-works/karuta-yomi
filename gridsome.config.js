@@ -16,7 +16,7 @@ module.exports = {
   siteDescription: description,
   siteUrl: `${appHost}/${name}`,
   pathPrefix: `/${name}`,
-  icon: './src/assets/app-icon.png',
+  icon: 'src/assets/app-icon.png',
 
   css: {
     loaderOptions: {
@@ -37,7 +37,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Game',
-        path: './src/data/games/*.json'
+        path: 'src/data/games/*.json'
       }
     }
   ],
