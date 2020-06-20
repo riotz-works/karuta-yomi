@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html data-html-server-rendered="true" lang="en" data-vue-tag="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D%7D">
+  <head>
+    <title>いろはかるた 江戸 | かるたよみ</title><meta name="gridsome:hash" content="60068e7bd2bd4dbebea49456db88d79ce1f1da29"><meta data-vue-tag="ssr" charset="utf-8"><meta data-vue-tag="ssr" name="generator" content="Gridsome v0.7.13"><meta data-vue-tag="ssr" data-key="viewport" name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta data-vue-tag="ssr" data-key="format-detection" name="format-detection" content="telephone=no"><meta data-vue-tag="ssr" data-key="description" name="description" content="音声合成の読み上げで楽しむ「かるた」取り - いろは47文字に対応した最も古典的なかるた。
+ことわざを使っているが、内容は江戸、京都・大坂など上方、尾張などで各々異なっており、地方の特色が表れて、「郷土かるた」も各地に存在する。「犬も歩けば棒に当たる」で始まるものは、江戸かるた（犬棒かるた）である。"><meta data-vue-tag="ssr" data-key="twitter:card" name="twitter:card" content="summary"><meta data-vue-tag="ssr" data-key="twitter:creator" name="twitter:creator" content="@riotz_works"><meta data-vue-tag="ssr" data-key="twitter:site" name="twitter:site" content="https://riotz.works"><meta data-vue-tag="ssr" data-key="twitter:image" name="twitter:image:src" content="https://riotz.works/karuta-yomi/assets/img/app-icon.865acb4a.png"><meta data-vue-tag="ssr" data-key="twitter:title" name="twitter:title" content="いろはかるた 江戸 | かるたよみ"><meta data-vue-tag="ssr" data-key="twitter:description" name="twitter:description" content="音声合成の読み上げで楽しむ「かるた」取り - いろは47文字に対応した最も古典的なかるた。
+ことわざを使っているが、内容は江戸、京都・大坂など上方、尾張などで各々異なっており、地方の特色が表れて、「郷土かるた」も各地に存在する。「犬も歩けば棒に当たる」で始まるものは、江戸かるた（犬棒かるた）である。"><meta data-vue-tag="ssr" data-key="og:type" property="og:type" content="website"><meta data-vue-tag="ssr" data-key="og:site_name" property="og:site_name" content="かるたよみ"><meta data-vue-tag="ssr" data-key="og:url" property="og:url" content="https://riotz.works"><meta data-vue-tag="ssr" data-key="og:image" property="og:image" content="https://riotz.works/karuta-yomi/assets/img/app-icon.865acb4a.png"><meta data-vue-tag="ssr" data-key="og:title" property="og:title" content="いろはかるた 江戸 | かるたよみ"><meta data-vue-tag="ssr" data-key="og:description" property="og:description" content="音声合成の読み上げで楽しむ「かるた」取り - いろは47文字に対応した最も古典的なかるた。
+ことわざを使っているが、内容は江戸、京都・大坂など上方、尾張などで各々異なっており、地方の特色が表れて、「郷土かるた」も各地に存在する。「犬も歩けば棒に当たる」で始まるものは、江戸かるた（犬棒かるた）である。"><link data-vue-tag="ssr" rel="icon" href="data:,"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="16x16" href="/karuta-yomi/assets/static/app-icon.ce0531f.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="32x32" href="/karuta-yomi/assets/static/app-icon.ac8d93a.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96" href="/karuta-yomi/assets/static/app-icon.b9532cc.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="76x76" href="/karuta-yomi/assets/static/app-icon.f22e9f3.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="152x152" href="/karuta-yomi/assets/static/app-icon.62d22cb.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="120x120" href="/karuta-yomi/assets/static/app-icon.1539b60.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="167x167" href="/karuta-yomi/assets/static/app-icon.dc0cdc5.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="apple-touch-icon" type="image/png" sizes="180x180" href="/karuta-yomi/assets/static/app-icon.7b22250.865acb4a6ee735c1683eea832a20ce8f.png"><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/hannari.css" async><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&amp;display=swap" async><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand&amp;display=swap" async><link data-vue-tag="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&amp;display=swap" async><link data-vue-tag="ssr" rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.3/css/unicons.css" async><link rel="preload" href="/karuta-yomi/assets/css/0.styles.75c55d65.css" as="style"><link rel="preload" href="/karuta-yomi/assets/js/app.f5ff011d.js" as="script"><link rel="preload" href="/karuta-yomi/assets/js/page--src--templates--game-vue.541922cd.js" as="script"><link rel="prefetch" href="/karuta-yomi/assets/js/page--node-modules--gridsome--app--pages--404-vue.1c495eaf.js"><link rel="prefetch" href="/karuta-yomi/assets/js/page--src--pages--about-vue.2979c7af.js"><link rel="prefetch" href="/karuta-yomi/assets/js/page--src--pages--index-vue.9886a635.js"><link rel="prefetch" href="/karuta-yomi/assets/js/vendors~page--src--templates--game-vue.79354865.js"><link rel="stylesheet" href="/karuta-yomi/assets/css/0.styles.75c55d65.css"><style data-vue-tag="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #00552e; }
+.v-application .primary {
+  background-color: #00552e !important;
+  border-color: #00552e !important;
+}
+.v-application .primary--text {
+  color: #00552e !important;
+  caret-color: #00552e !important;
+}
+.v-application .primary.lighten-5 {
+  background-color: #90d9a9 !important;
+  border-color: #90d9a9 !important;
+}
+.v-application .primary--text.text--lighten-5 {
+  color: #90d9a9 !important;
+  caret-color: #90d9a9 !important;
+}
+.v-application .primary.lighten-4 {
+  background-color: #75bd8f !important;
+  border-color: #75bd8f !important;
+}
+.v-application .primary--text.text--lighten-4 {
+  color: #75bd8f !important;
+  caret-color: #75bd8f !important;
+}
+.v-application .primary.lighten-3 {
+  background-color: #5aa275 !important;
+  border-color: #5aa275 !important;
+}
+.v-application .primary--text.text--lighten-3 {
+  color: #5aa275 !important;
+  caret-color: #5aa275 !important;
+}
+.v-application .primary.lighten-2 {
+  background-color: #40885c !important;
+  border-color: #40885c !important;
+}
+.v-application .primary--text.text--lighten-2 {
+  color: #40885c !important;
+  caret-color: #40885c !important;
+}
+.v-application .primary.lighten-1 {
+  background-color: #256e45 !important;
+  border-color: #256e45 !important;
+}
+.v-application .primary--text.text--lighten-1 {
+  color: #256e45 !important;
+  caret-color: #256e45 !important;
+}
+.v-application .primary.darken-1 {
+  background-color: #003d19 !important;
+  border-color: #003d19 !important;
+}
+.v-application .primary--text.text--darken-1 {
+  color: #003d19 !important;
+  caret-color: #003d19 !important;
+}
+.v-application .primary.darken-2 {
+  background-color: #002700 !important;
+  border-color: #002700 !important;
+}
+.v-application .primary--text.text--darken-2 {
+  color: #002700 !important;
+  caret-color: #002700 !important;
+}
+.v-application .primary.darken-3 {
+  background-color: #001700 !important;
+  border-color: #001700 !important;
+}
+.v-application .primary--text.text--darken-3 {
+  color: #001700 !important;
+  caret-color: #001700 !important;
+}
+.v-application .primary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .primary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary {
+  background-color: #333631 !important;
+  border-color: #333631 !important;
+}
+.v-application .secondary--text {
+  color: #333631 !important;
+  caret-color: #333631 !important;
+}
+.v-application .secondary.lighten-5 {
+  background-color: #aeb2ac !important;
+  border-color: #aeb2ac !important;
+}
+.v-application .secondary--text.text--lighten-5 {
+  color: #aeb2ac !important;
+  caret-color: #aeb2ac !important;
+}
+.v-application .secondary.lighten-4 {
+  background-color: #949791 !important;
+  border-color: #949791 !important;
+}
+.v-application .secondary--text.text--lighten-4 {
+  color: #949791 !important;
+  caret-color: #949791 !important;
+}
+.v-application .secondary.lighten-3 {
+  background-color: #7a7e78 !important;
+  border-color: #7a7e78 !important;
+}
+.v-application .secondary--text.text--lighten-3 {
+  color: #7a7e78 !important;
+  caret-color: #7a7e78 !important;
+}
+.v-application .secondary.lighten-2 {
+  background-color: #61655f !important;
+  border-color: #61655f !important;
+}
+.v-application .secondary--text.text--lighten-2 {
+  color: #61655f !important;
+  caret-color: #61655f !important;
+}
+.v-application .secondary.lighten-1 {
+  background-color: #4a4d47 !important;
+  border-color: #4a4d47 !important;
+}
+.v-application .secondary--text.text--lighten-1 {
+  color: #4a4d47 !important;
+  caret-color: #4a4d47 !important;
+}
+.v-application .secondary.darken-1 {
+  background-color: #1e211c !important;
+  border-color: #1e211c !important;
+}
+.v-application .secondary--text.text--darken-1 {
+  color: #1e211c !important;
+  caret-color: #1e211c !important;
+}
+.v-application .secondary.darken-2 {
+  background-color: #050a01 !important;
+  border-color: #050a01 !important;
+}
+.v-application .secondary--text.text--darken-2 {
+  color: #050a01 !important;
+  caret-color: #050a01 !important;
+}
+.v-application .secondary.darken-3 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-3 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .secondary.darken-4 {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+}
+.v-application .secondary--text.text--darken-4 {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+.v-application .accent {
+  background-color: #1853b5 !important;
+  border-color: #1853b5 !important;
+}
+.v-application .accent--text {
+  color: #1853b5 !important;
+  caret-color: #1853b5 !important;
+}
+.v-application .accent.lighten-5 {
+  background-color: #bdd4ff !important;
+  border-color: #bdd4ff !important;
+}
+.v-application .accent--text.text--lighten-5 {
+  color: #bdd4ff !important;
+  caret-color: #bdd4ff !important;
+}
+.v-application .accent.lighten-4 {
+  background-color: #9fb8ff !important;
+  border-color: #9fb8ff !important;
+}
+.v-application .accent--text.text--lighten-4 {
+  color: #9fb8ff !important;
+  caret-color: #9fb8ff !important;
+}
+.v-application .accent.lighten-3 {
+  background-color: #819eff !important;
+  border-color: #819eff !important;
+}
+.v-application .accent--text.text--lighten-3 {
+  color: #819eff !important;
+  caret-color: #819eff !important;
+}
+.v-application .accent.lighten-2 {
+  background-color: #6384ee !important;
+  border-color: #6384ee !important;
+}
+.v-application .accent--text.text--lighten-2 {
+  color: #6384ee !important;
+  caret-color: #6384ee !important;
+}
+.v-application .accent.lighten-1 {
+  background-color: #436bd1 !important;
+  border-color: #436bd1 !important;
+}
+.v-application .accent--text.text--lighten-1 {
+  color: #436bd1 !important;
+  caret-color: #436bd1 !important;
+}
+.v-application .accent.darken-1 {
+  background-color: #003c9a !important;
+  border-color: #003c9a !important;
+}
+.v-application .accent--text.text--darken-1 {
+  color: #003c9a !important;
+  caret-color: #003c9a !important;
+}
+.v-application .accent.darken-2 {
+  background-color: #00287f !important;
+  border-color: #00287f !important;
+}
+.v-application .accent--text.text--darken-2 {
+  color: #00287f !important;
+  caret-color: #00287f !important;
+}
+.v-application .accent.darken-3 {
+  background-color: #001565 !important;
+  border-color: #001565 !important;
+}
+.v-application .accent--text.text--darken-3 {
+  color: #001565 !important;
+  caret-color: #001565 !important;
+}
+.v-application .accent.darken-4 {
+  background-color: #00004d !important;
+  border-color: #00004d !important;
+}
+.v-application .accent--text.text--darken-4 {
+  color: #00004d !important;
+  caret-color: #00004d !important;
+}
+.v-application .error {
+  background-color: #f73b70 !important;
+  border-color: #f73b70 !important;
+}
+.v-application .error--text {
+  color: #f73b70 !important;
+  caret-color: #f73b70 !important;
+}
+.v-application .error.lighten-5 {
+  background-color: #ffd3f7 !important;
+  border-color: #ffd3f7 !important;
+}
+.v-application .error--text.text--lighten-5 {
+  color: #ffd3f7 !important;
+  caret-color: #ffd3f7 !important;
+}
+.v-application .error.lighten-4 {
+  background-color: #ffb5da !important;
+  border-color: #ffb5da !important;
+}
+.v-application .error--text.text--lighten-4 {
+  color: #ffb5da !important;
+  caret-color: #ffb5da !important;
+}
+.v-application .error.lighten-3 {
+  background-color: #ff98be !important;
+  border-color: #ff98be !important;
+}
+.v-application .error--text.text--lighten-3 {
+  color: #ff98be !important;
+  caret-color: #ff98be !important;
+}
+.v-application .error.lighten-2 {
+  background-color: #ff7aa3 !important;
+  border-color: #ff7aa3 !important;
+}
+.v-application .error--text.text--lighten-2 {
+  color: #ff7aa3 !important;
+  caret-color: #ff7aa3 !important;
+}
+.v-application .error.lighten-1 {
+  background-color: #ff5c89 !important;
+  border-color: #ff5c89 !important;
+}
+.v-application .error--text.text--lighten-1 {
+  color: #ff5c89 !important;
+  caret-color: #ff5c89 !important;
+}
+.v-application .error.darken-1 {
+  background-color: #d70958 !important;
+  border-color: #d70958 !important;
+}
+.v-application .error--text.text--darken-1 {
+  color: #d70958 !important;
+  caret-color: #d70958 !important;
+}
+.v-application .error.darken-2 {
+  background-color: #b80041 !important;
+  border-color: #b80041 !important;
+}
+.v-application .error--text.text--darken-2 {
+  color: #b80041 !important;
+  caret-color: #b80041 !important;
+}
+.v-application .error.darken-3 {
+  background-color: #99002b !important;
+  border-color: #99002b !important;
+}
+.v-application .error--text.text--darken-3 {
+  color: #99002b !important;
+  caret-color: #99002b !important;
+}
+.v-application .error.darken-4 {
+  background-color: #7a0018 !important;
+  border-color: #7a0018 !important;
+}
+.v-application .error--text.text--darken-4 {
+  color: #7a0018 !important;
+  caret-color: #7a0018 !important;
+}
+.v-application .info {
+  background-color: #007bbb !important;
+  border-color: #007bbb !important;
+}
+.v-application .info--text {
+  color: #007bbb !important;
+  caret-color: #007bbb !important;
+}
+.v-application .info.lighten-5 {
+  background-color: #baffff !important;
+  border-color: #baffff !important;
+}
+.v-application .info--text.text--lighten-5 {
+  color: #baffff !important;
+  caret-color: #baffff !important;
+}
+.v-application .info.lighten-4 {
+  background-color: #9be7ff !important;
+  border-color: #9be7ff !important;
+}
+.v-application .info--text.text--lighten-4 {
+  color: #9be7ff !important;
+  caret-color: #9be7ff !important;
+}
+.v-application .info.lighten-3 {
+  background-color: #7dcbff !important;
+  border-color: #7dcbff !important;
+}
+.v-application .info--text.text--lighten-3 {
+  color: #7dcbff !important;
+  caret-color: #7dcbff !important;
+}
+.v-application .info.lighten-2 {
+  background-color: #5eaff4 !important;
+  border-color: #5eaff4 !important;
+}
+.v-application .info--text.text--lighten-2 {
+  color: #5eaff4 !important;
+  caret-color: #5eaff4 !important;
+}
+.v-application .info.lighten-1 {
+  background-color: #3c95d7 !important;
+  border-color: #3c95d7 !important;
+}
+.v-application .info--text.text--lighten-1 {
+  color: #3c95d7 !important;
+  caret-color: #3c95d7 !important;
+}
+.v-application .info.darken-1 {
+  background-color: #0062a0 !important;
+  border-color: #0062a0 !important;
+}
+.v-application .info--text.text--darken-1 {
+  color: #0062a0 !important;
+  caret-color: #0062a0 !important;
+}
+.v-application .info.darken-2 {
+  background-color: #004b85 !important;
+  border-color: #004b85 !important;
+}
+.v-application .info--text.text--darken-2 {
+  color: #004b85 !important;
+  caret-color: #004b85 !important;
+}
+.v-application .info.darken-3 {
+  background-color: #00356c !important;
+  border-color: #00356c !important;
+}
+.v-application .info--text.text--darken-3 {
+  color: #00356c !important;
+  caret-color: #00356c !important;
+}
+.v-application .info.darken-4 {
+  background-color: #002053 !important;
+  border-color: #002053 !important;
+}
+.v-application .info--text.text--darken-4 {
+  color: #002053 !important;
+  caret-color: #002053 !important;
+}
+.v-application .success {
+  background-color: #7b8d42 !important;
+  border-color: #7b8d42 !important;
+}
+.v-application .success--text {
+  color: #7b8d42 !important;
+  caret-color: #7b8d42 !important;
+}
+.v-application .success.lighten-5 {
+  background-color: #ffffc5 !important;
+  border-color: #ffffc5 !important;
+}
+.v-application .success--text.text--lighten-5 {
+  color: #ffffc5 !important;
+  caret-color: #ffffc5 !important;
+}
+.v-application .success.lighten-4 {
+  background-color: #eafba9 !important;
+  border-color: #eafba9 !important;
+}
+.v-application .success--text.text--lighten-4 {
+  color: #eafba9 !important;
+  caret-color: #eafba9 !important;
+}
+.v-application .success.lighten-3 {
+  background-color: #cddf8e !important;
+  border-color: #cddf8e !important;
+}
+.v-application .success--text.text--lighten-3 {
+  color: #cddf8e !important;
+  caret-color: #cddf8e !important;
+}
+.v-application .success.lighten-2 {
+  background-color: #b1c374 !important;
+  border-color: #b1c374 !important;
+}
+.v-application .success--text.text--lighten-2 {
+  color: #b1c374 !important;
+  caret-color: #b1c374 !important;
+}
+.v-application .success.lighten-1 {
+  background-color: #96a75b !important;
+  border-color: #96a75b !important;
+}
+.v-application .success--text.text--lighten-1 {
+  color: #96a75b !important;
+  caret-color: #96a75b !important;
+}
+.v-application .success.darken-1 {
+  background-color: #61732a !important;
+  border-color: #61732a !important;
+}
+.v-application .success--text.text--darken-1 {
+  color: #61732a !important;
+  caret-color: #61732a !important;
+}
+.v-application .success.darken-2 {
+  background-color: #485b11 !important;
+  border-color: #485b11 !important;
+}
+.v-application .success--text.text--darken-2 {
+  color: #485b11 !important;
+  caret-color: #485b11 !important;
+}
+.v-application .success.darken-3 {
+  background-color: #304300 !important;
+  border-color: #304300 !important;
+}
+.v-application .success--text.text--darken-3 {
+  color: #304300 !important;
+  caret-color: #304300 !important;
+}
+.v-application .success.darken-4 {
+  background-color: #1e2d00 !important;
+  border-color: #1e2d00 !important;
+}
+.v-application .success--text.text--darken-4 {
+  color: #1e2d00 !important;
+  caret-color: #1e2d00 !important;
+}
+.v-application .warning {
+  background-color: #ee7800 !important;
+  border-color: #ee7800 !important;
+}
+.v-application .warning--text {
+  color: #ee7800 !important;
+  caret-color: #ee7800 !important;
+}
+.v-application .warning.lighten-5 {
+  background-color: #ffff98 !important;
+  border-color: #ffff98 !important;
+}
+.v-application .warning--text.text--lighten-5 {
+  color: #ffff98 !important;
+  caret-color: #ffff98 !important;
+}
+.v-application .warning.lighten-4 {
+  background-color: #ffe67d !important;
+  border-color: #ffe67d !important;
+}
+.v-application .warning--text.text--lighten-4 {
+  color: #ffe67d !important;
+  caret-color: #ffe67d !important;
+}
+.v-application .warning.lighten-3 {
+  background-color: #ffca61 !important;
+  border-color: #ffca61 !important;
+}
+.v-application .warning--text.text--lighten-3 {
+  color: #ffca61 !important;
+  caret-color: #ffca61 !important;
+}
+.v-application .warning.lighten-2 {
+  background-color: #ffae46 !important;
+  border-color: #ffae46 !important;
+}
+.v-application .warning--text.text--lighten-2 {
+  color: #ffae46 !important;
+  caret-color: #ffae46 !important;
+}
+.v-application .warning.lighten-1 {
+  background-color: #ff9329 !important;
+  border-color: #ff9329 !important;
+}
+.v-application .warning--text.text--lighten-1 {
+  color: #ff9329 !important;
+  caret-color: #ff9329 !important;
+}
+.v-application .warning.darken-1 {
+  background-color: #ce5e00 !important;
+  border-color: #ce5e00 !important;
+}
+.v-application .warning--text.text--darken-1 {
+  color: #ce5e00 !important;
+  caret-color: #ce5e00 !important;
+}
+.v-application .warning.darken-2 {
+  background-color: #af4500 !important;
+  border-color: #af4500 !important;
+}
+.v-application .warning--text.text--darken-2 {
+  color: #af4500 !important;
+  caret-color: #af4500 !important;
+}
+.v-application .warning.darken-3 {
+  background-color: #902b00 !important;
+  border-color: #902b00 !important;
+}
+.v-application .warning--text.text--darken-3 {
+  color: #902b00 !important;
+  caret-color: #902b00 !important;
+}
+.v-application .warning.darken-4 {
+  background-color: #740d00 !important;
+  border-color: #740d00 !important;
+}
+.v-application .warning--text.text--darken-4 {
+  color: #740d00 !important;
+  caret-color: #740d00 !important;
+}</style><noscript data-vue-tag="ssr"><style>.g-image--loading{display:none;}</style></noscript>
+  </head>
+  <body >
+    <div data-app="true" data-server-rendered="true" id="app" id="app" class="v-application Game v-application--is-ltr theme--light" style="background:url('/karuta-yomi/assets/img/prep.9738f7be.jpg') center top / cover no-repeat fixed;" data-v-e31a8722><div class="v-application--wrap"><header id="app-header" class="v-sheet v-sheet--tile theme--light v-toolbar v-toolbar--flat v-app-bar v-app-bar--fixed transparent" style="height:64px;margin-top:0px;transform:translateY(0px);left:0px;right:0px;"><div class="v-toolbar__content" style="height:64px;"><a href="/karuta-yomi/" class="active"><img src="data:image/svg+xml,%3csvg fill='none' viewBox='0 0 54 54' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdefs%3e%3cfilter id='__svg-blur-a1bf4732dc7abaffb12a73a72a252a5c'%3e%3cfeGaussianBlur in='SourceGraphic' stdDeviation='40'/%3e%3c/filter%3e%3c/defs%3e%3cimage x='0' y='0' filter='url(%23__svg-blur-a1bf4732dc7abaffb12a73a72a252a5c)' width='54' height='54' xlink:href='data:image/png%3bbase64%2ciVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAgAElEQVR42t17B3ckZ5l1mxXs6kOHPbCcBRYMS1gbMGDgM2scAOeMcY444IBlHDDYxtjYGBs5xxlPTpqRNCONwgSl0Sjn2N3qnHMO1bm6Ylff76nSHO/u9xO2z6mp7lZ1T73Pc5/73Pu%2bb%2bt0/%2b3B52w6mXVrz8WSU1fJWnRi0aHLZG26hYBJV6kKOklUdIJQ0wl8TVeToPMlg7pofFUnF826KmPQcQWLzugz6jL5kk4W6rpylddFmYzOF4vqLEGTLpIw68Jp%2bntwRFcLDemU0AGdGNynk3LHdEplRofSlC4Tn9A5DYs639KszrA0pSuOndDJbXt04pHDOunAbp3U1aqTho/ppIE2nTy1TSetbddVAz26WmVNV2f6dVJmWCck2nVyep%2bulu7T1eIdOtmxXacE%2b3W1ckIbXy0%2bp/sfjyqz/vFzoWD%2bhJgzfEL3v%2bwhATo5NfsPfN60keTs6sYfxLJDO8sVp44vWj8euMQFPgXF25grexuHg6ZGUZYbATRKktwo8vS8jka5Vm2MFWz0fqyR59Qz1yiWMo2xXLYRChpzcqlx1LXY2D13orFt5r3GVPwwXWNsROLDRth6GkVHW6MS2tkI4WhjHf5GVI2NIv09jkLjTDrd%2bKbL0Jg8Sp/pbG%2bsh32NGJ1oRFdro9x7qLHeuaURM282KtPbGuXwUe17a9xwo8jONKLQTvd3uFGp6hvB0t8Cuxv/ezCEzNppG7AnyKqPOu%2bi59bTNhBgOk8s2g%2bV0yY3l7NH0xlrZNlvipRZPsJzcoTnaxEqgYgk1iO2iCcSiS5FJEYfqabXIsXUamTBuRzJ5ssRkVciFVaIMMVyJMXkI4F4MBKKuyOW0FrE55uOcNGhiBLdHxGCrREhczxSK4xGUByLJP0nI7aZiUhk%2bmTEPz8WKU%2bORsS23RGhbV%2bE37k5InS2RsSTAxFx%2bFBEmtoZEQ07IhX/4YiUX4nU6XukZD99d1tEjO2OyPGOiBCg661bw7XgwKySWXoMvr3aOKXMymk6PtCpKxI0yslVLfNszvSYVDQDNTeEvAVi3gGh7IMxaEE4kQENGvU6UFfoEjq8CS9KmVUoBQuUnBmh2ALmvSa6DlBqgEy4I66AItUh02dFoYYiKyBfLkOq%2bIHCCToGUcuNoZY%2bAjDdYGb3IX%2bkDRjug7JuQD2TQ31lCTjcARzrRn2gB3J/F%2bTBNtQX9gLunah5t0KJHwPSB4DicdSTBwmUe4D8YXpN35seAMpzAL%2bOKrM6IcHR9DEciPC0wctV7yXg/KhmzBCZFYnNGJRyyqJUC07F4DUovkhMocwrhACF42SFsqs4QjalGFtRuLRVERkbXbeomIM%2bRRagcFVZKZd5JZXKKNVyReErVUVgy4pU8Ci11KwihQ8oUvyQojCDSi15XOEjh5WKfbdSHd%2bq1JYOK8LkfqXkX1UEsazwpbJSnZtVan2dijw/qXAnehW2d6fCzu5XqqbNCu94S%2bH97yli9C2l5P1QCRn3KHnnR4pv7hmle9fvlKTriJL1dNfE5JgIxgDRNdO%2bUQu5VZ2Ud2iQEPP6IQhusKllScwbwKZX67nIal3M22ENGuGKhiFwMjhORKnAIp7NYs65gpzTgIplCSXLPGasc4gxhBS%2bhmpVQjabRyadBc9J4EoVCN4lyOu7IPt7IYV2gvdtRTV0CFxsAFxqBmXvMbDeYbqHk6jEeuncjWpxAtWKHWwiCHF0CPLhfZB6dkGY7YVgHwIbPImyrw1Fx3tA5D0MtT2J66/6Ia666Ey89NRV%2bO4ZX67/xze%2bWJ8eeBFI7KuL/bvqtaEjSm1u%2bPu6atagBaLMGD/NZQ1JlIyQ8muKWDDV2ayhnosZIeassAVW4YyGIHI18FVRO8LJJNbc68hnMmCCAbhMi1hyG8GyVQg8XUOBKuRLKJWq4NXB6xcg9O2CONkKztCDqr8LfHoQQvI4JGYMfGqMBtmPamEMlfIAKpVJOo%2bDLauvh1CuzEHWn0D9KMF7iMrBdIwqdQBKYhJS5BAq3gMo27eiEmjFuT/%2bBi654ExElt/GNZecjR%2bc9RXM9j9XR2hPXRzaWsu07YCh9%2bCDOi6t1wJQjJma%2bMxqrpg0IhdfV8S8uc5lzcgnTOCyDkQTDnhUBPCEgKqAcpFFIJuE0bmAQiqMQjqBacq%2bOeyFqAaI5emaChimCL4iQDCsQujaC%2bHYYcpiF6TV3aiF21BLHIMSOUxo6IIQosBEDlIJEgpKI3SMolqeAFscRyk/QogahW2tC5aJE9AfPYzDH6gZpcEHulGLtaNGaKlnD%2bPFp2/Ht/79C7jx6nPx5gv34Aff/hK%2b/MXP4tDOZ4gHJutZz7TsN63CrF99VMdlrVoAkF9pqqSdjMfjgNtlV9i8HxxjRzZqRDXrRjhqwJrXTPDnUCyUkGcKcMYDhAwLuHwWLkLCgH4SkXQOHFujQ0QqmUU2noSwugKxYxekQ3sgd%2b%2bFcnwzFNcAZN8opMV2SMsd4CxEbJ4D4L27UI20I52YoUFbCf4%2bQCpQUKmsuCL6envQ8tpruPqaX6H5niuINAfBhw9CjGwFH/oIcnQfVsc/xFdP/wLuuOlSPPfk3bjusgvwmc98GpNDO8FmbPW5JYMcp/uMR%2bPNOrnk3QhATd/E5YKMUGKRTaeUXNJDHcCGUmKdAuFCLGnFoseIcrlI9U9ZrfIwRTzwxsOQSiWYvQ7MukwEW6p1KhOOkFLKsyibLRDmZiCMDUA4SXU%2b3o3y8jHwfiuE6UFIJzsgjKoHBUa/H4KHyiK0H6XkMipFntoN0NdzDB3tnbj0ksvQf/Q4rrn6WvzzP52G2MLrFIDD4GOHwHveQ8m1DcgeQd%2bBp/GP//hJ3HbD%2bbjy4p9QCfwCjY3/hOefuRf6mZ66w26RDbYg5lctzbp0xqwFIJ2fbEqnnAxfqSCXZRSzZR1OhxH5uI1anBVs3kdE6EQyGYd6DU9IWA85EUslIVNbM4e8sEeCkIQ6lYiEQq6CIh08lQpX4TQO4PMFcMUiikUOVYsRwr73IByirHQRoR3dDWW%2bDZKrA2yUEJEdp%2bxTg6bH31/9O772ta/h3J%2beh7fffAvf%2bPrX8eMzv4Ltr9wIKdaBcpj4JHAAYqIDCjOAPR8%2bhLG%2bl9C29Xe4%2bMLvYueHz6Ptozfw9z88jIWhXRQAo7wwZ4BpdqlZ501taONwPtvkTsaYUDqJdb9bmaQbnFjTY9VmQK7gRa4YgN5vQjgegcRWUGVLMFEAEukYkrkMZt0mOucIGTXUKGvxDEOaIIEyBUdUg0LdI58vo0QBUa/h9XMQdr0NbtdmVA7uBrf7LUhzxO7%2bIyjHu1CMdiIfMFPgWOSzOYwMDkO0WnDzpRdDBeyDt1yB0Nyb1N97UaFr5dheyKkBCsIQ9f1O6v9tUFL7kVFRkl4AnzEhbZ2Ac3GiblpckIvWZfD2%2bWadKNU3lGANTYJYZ0SZPsvySo6yHGVyCGZS0LvtMBDEj0%2bO4tjIIDIFBu5kGOs%2bO5whG6ZdS1j0WimzVS1j7V2dODbaDWfYghDxRIZJIxiJwhMMIkWipkDkKKwugmvdgvL2D8Du24Jq60fgVwchBwZRjfcg421DNjBH5VYg9mchhsJ476EHcM25P8bRtx7FO8/dg4vO/z5My5tQK1IHiB8EmxwHH9mDgmsTKr7N1BIPINj1F7z26D1IF/2IZjwIrS/WS9YRGSIhWwg160jUbLgjCgD1bYbcHgRWUrSR1LR/sb%2b1De%2b%2b%2bwFuu%2b0OPPb4EyBhhwgNJEJZ9qdTxPwBLHss2rVjYxNahh596A76fBCZ6ArS0TWEqY16SEs4Q2Z4wjbklqfAHd6P4r7tqG6nUpg4SeTnA2/uosH2oRg8RAQ6iHXnMiyONTAnjmHsr39E4ABl1EktMNOOv710B9598z7I1SnY/EYwsRVUiAghtKN718N46uHbsXZkN/7xE6fh6uuuwvzkAKre6Xo2NC2nY1Z4zFQCpZK4QYJAUzZbZgqFCjE4r8xMzWJkeAQPPPAABvoHcdVVV%2bGLX/wiGIJjTa4TjCmIJHYkvo5wIY8gm0FPdw8a/8%2bncdOtv8Kdt/0Szz31IGnhEOQsyc/ECvV5usHYHPKxWZQWjqLafQClg62o7ngX2RO98IQoQ9RJROrvopOIkDoC4z2Ogo20wgzJ2dEdEKc2o%2bRpR4laXo2n7sJ6iaBDMHqcqFI3KocPo3vnfXjytxfh7rsvw2/u/w1O/9KXcO9dd8NnN8FvXqsvzs7IVrMZ5nVDs45l%2bY8DUMiXmXKZUxOp/P73f8BZZ52Fr3/9G3jn7XfxpS/9G8455xx0dnaTsOE0ccMSual6f8ayhgd%2b/yhuvP5XaO/pxM8vvhBDvbtw5aU/w123Xou4k5RdchVc2kC1qIeQWgSvBYBg23sI7P4dKG16A8zCOLK2RbArFIDJveDX9qFqJ83g7IVsoLNpC/X9Idxx8y8w3N%2bJWrVKpMrCFfbB4XMQyRZRq5jw2wcuxl9fuBYvvngzofE0ItDT8cenn0Iun4Ev4K7bwzY5Vo4jnA43a5MbGgfU0cRxEkNanzIMJRiIYstH2%2bGwe3DFFVdosG5%2bpJmiZqOBi1oQeF7aKJG%2bbrz6yt8wMzGO%2bx76Da66%2bhL87LxzwESMeKL5Huzf%2bioUaqlcak0LAKciwj2H6uE2sB17UD1BQmhkANLgUQiECn64HfzyEQimPrBOEki%2bbiBI5ojpwePNt%2bHsH52DsNMBsZhHkThq3U1GLRogk5MnzZDFsb63cNmlZ%2bNbZ5yOB3/7ML7//e/h4osu0u61UCrUM0xWFilzBPf/CoAsK000eIa4gBSXrKguTqJD7b%2b/%2bMUvNA545pln8fQfn0EiniE9IEDliyLpAXPUR%2b5QRCgcxOTiGB5/9D78%2b1e/QhLaSfUYRCmmJwSYSPIS86ZIWJHAKhkmwO3bgcrkMZScMxCPHILU3QHx4E6Ig3vJrPRB8rZD9HZCSfeDD%2bzFEw9fhWtuuB4ektSKnb6TNEiO1Oiqw4BELIgKdTAQm7/8wgv4wheacPc91%2bC%2bRx7Etbf8Cuee/1PceMstGBw/UXf5PbIr7IHDY6UuIMgfl0C1KjCVCg/VxQnUurzeEN5%2b610sLem16OXzFVx77S%2bxZct27TVblpApV2AifVCiVhgvZrCvczduuPYSjA92oF50oUBeohgj6KcMKMXXSeuTcUqbUZghUdS2G2X3Akr%2bJQgjXaidOIDafC/EdTrIIElhCkCYCK8wDOPkB7j0oh%2bhnBwFAkfAupdJoFF3Id5YtK1pUpylYIgl6lDULhdnjqKcd2FldR4Bvx1TJwdx5003YMu7b9X1kydl%2b%2bIU6YCxZp0kKacCUG8iNDAC%2bXg6k%2bWVkUoxmv9XqCeoh4oKrqoQArJqkMjfkxXPJGEJ2CFXSqQKffB6FrWs10seCAwRE%2bOh2jeBJw7IRWjwhIZijFh9/Aiqw4dRjBAxhqkluk%2biZichE5%2bCTOzPx/rpa/ZACBMaQuTx053Y9eHvcMn538D8yfeoNaaou5A2If7R2w30/6RRyZDuSEUgFLN0s5RIureo00oi6EMY52fBFXIk69P1bMAjC9TK00Ffswr9UwFQmkTSAWoJ0KAJAQrBnCdnJ2jZ/tOzz8GwTpkjjR8nH5Ai5lfhvxpyY44Uo4NamD5iwbptDi/8%2bQ8IhE3EzmSg6ByIrNNhhDdghJvalde7iOLIQRSne5ALzZMdnkYhMEm2to/gPoBa9hikzFGyyMQB/t0UhN30t70kcDow0v0ivvyV07Fl93bEsnHMU/bNXgtK2QQFIUn2OUJCKoTuA3sx3NkOt2EZP/rh2TjRf0zjjLLFWK8EvXJVlfRMtlmXyhe1AKSK5aZUvsDkCNKhTFpxRsIEeVYb/N9efgX/dvpXsGBdR5h6vzeZoHMGkWwWPrLEgVQCHjq7YjH88fnn8KnGRrR1Uz%2bnzwYSSURSGSQYBkn6rIN4Yp5UWF4/CNYzgVJkGWxkFQnHNNLuCQjxIUjJY6TqjkDOnKAgkN%2bP94MNbEXZQ%2bKmaMbi5AQGentRonuwra9gzbgMk9UAv8sCt34JXsMifvyjH6J19w6szE3jS1/8gtbR3n/5JYjEASUqATYTRyGbbNYVSpwWgEKFb8qXqgxHXSCezyvzDhOisRSefeY5XH31NRRpMxIUNZH6Ps8pmuZXy0PiFSoFRZv2qpDGP/OMM/HiCy9C4ESsLFLro3ZZE0gzUMuUCTFZguGyc5W0gB48aQMuTs8D84iuj6GwdpzMUA%2b5u26IpAalRC%2bk1DEKwjFUSBgV3N3wr80gRh0g5fMQGa7AtTIP5%2bQ43H2H4T3eB/fkCO741XXY%2bXYLTnS24ZZfXodPffKT%2bPKXv4zH7rkLnl2b6/XBwzKoXKsl6gLyKQ6grtAkiTVGnevLlyuKl0ngaH8/fnndLzUU2DJReBMxtUVCFGvk%2bjgyPGUIVUFzhnylihxl%2bPix49RyLsYfnvoDfv3rX8PlcKGiGqEqtU22Ciafx5J5DkxgSgtANbZAmZ1EZegg5IGtkO2tGvFx4T1gQzvoTE6PAlEKHiR0dAGpabz54rPYuonQIPIoU51Xgj4yVdQ%2bd28Fjvfi1Ttux2v33w2hdTP6X31Ka%2bF3kx5B1g7xRGtd7H1Xhn0aQpkCwHMbSpDIUOsCaiZLLKeYqKZVsfPn557Hvffei3ELwbRcJmND2ZdqpAUElEkLCKQFOOIJiUjT5/Hj9ddex%2bOPPa49VydAw6E4/N4wilRO6nQaQ2JlUj%2bBtJ8sMumCqm0EXCe1vt52bYqLXz8I3rZBfHL8ELhIL9HTOLr2PI0d7z%2bMGqnAB6%2b7mPRFM6xGA3UFlfgSSJtMKB6kjkF1/7tfXovLvnMmCpv/jnd%2bcyM%2b9akGnHXGVzDe9iIQ6qgLpgMyKOhxv4M4IJnXApDLlpoScYZRZ3PLvKQYKaqqaVEfr732Br5Eff3E5JT2mquKGgK0qS5O0g4KINJU64/97jE88fjjmJ6cJugrSMbTyKby5OjKWgCKZRaLphmkw6sQYktgR3tQ3rsN5f3bwB6n7K8eguhohxylVpjsJy7oRcCwBw/dew0%2b/y%2bfwe8fuAm3XnEZPvj7K7jg/AuovY2gTC7U63ZTgm3A4DH84pvfwO3n/ycwcBAnXn8a3/36v2F21x%2bRm3mPVOXWumTbJNesh%2bAxLTbrquwGAsjfN7GsxKgQL3OCYiR/n84xhLINtffG1k042NOjPVfn%2btRBq5OePA1KbZmkIiHTZ3O5Eo70HcfYKGl64ocqK2nzA%2bpUmkhHmeWwuD6LiGUe/OIIhH07gdbtYPvaIAyTt59rJ6Ym2ZuaRTW3BDEzi5TjEHrbX8ZXT/9X9LRvQdzjwCsv/RVbPvwQTCJBGiCFTDwGJpWCHA7BvIfI7%2bU/AZPHAdMANj1/NwpL7wKWnajq36rzprdkBA6D90yQEBKVj4UQeXZGVX8cV1OM1GP9qRgkGmyeYOuv5pCn3ipQ5jkaRCaTRzZTQo4haNNAVV1AChLBYAL9x4c3AkXuuJDjkErktSCIqnIkrrATUaXpJtHeCv9br6H7dw8B00chDu9B%2bST1fjspv%2bRxyuwAKoklyIl%2b%2bjYDnn3yRlx4/rnU4znUBQF1nidRlUY%2bToxOg69SpylkM3BaSBkOEIn2t0JapPYZHwCSxDFhCqx/e52375DhboWgf7dZxzClj71AIpElJSjSjUIxkLRUp7sgk%2bOjN1564%2b/oGxzQBlZSJzvJDqtzfkXV22sTpRJi0RQ6Orrw6U9/Gi9QJ8imycuXeMSjjBYcdXKUpTKq7NgKsa0VxbZ9uPHC8/HD75%2bJW3/xEyyRBK6sDJEMpsFTG8znCd4pYusolRMziBh5gp07XiT9H6EBpxH2%2bZCj9psKR7Qg8IUCEtEwTixPw6EfQs6wnyB/GBlyk8nVPVBIWdairfWav426wFHwEVKClaqkBaDCi00VVmZorBoCGNL2r29%2bDxMnR8EJPK6/5SY886fntOksSaprHKAKJTWragBU7lAV4v3334/TTjsNN95wE1RjpZZALlskQUWlkCAFOU/S9OQQwkvzmO7qwu8fugfXX3UR7nngNrjI8lan%2byCYe0khdiNfMJK6y6EQdZOkJu9QJmSIQxSAIMpZhs4Z5DNpMDR4lniAK5UQdNpJB5zA7jcexYEtT6Iebcf1l52FLa/ep60aVd0f1Tn3XhmZISLh6Wadn0lvkCBbaiJZy/iYDHLUBfReN6644Tp858wz8Wjzo7jwkovwt9dfx%2bWXXQ6n06u1w3JZ0jSBygEqF5hNDnJePyAL/XVykFdCtdQqKqrUJVjNY4gUTBl60u%2bJVBRvv/w30g3fxDnnnoPnX3oKPPkDjHaCne9AMTROJRCjwcfgsVgp%2b3YUc6OoYQIKlycRxCBLdc9SECrqQe21HIuiON5PrW4PbvzZD7A68hq1vk7kbZup3jeBdb0PzrelLsY6ZZSOUHvtbtZlsv6NGSGp0BRPOplA3I1QOqT0Tw3hieefRtM/fwYjk2M4PDaEx59%2bGq%2b1vIFysaq1wHKRarAsa2VhMJhwPrHyBRf8DLfeervWe//yl5cgEFoyhABVJImcrDnInhMDuP2u2/H4w49g26YPcOV1l%2bHM730bV/zobBj3bgKv7yMELNEg0yimkshGIzRQBgNH2/HCy/fi5FA/4sEwAg4HylT3bIIQsEyS%2bugh0gEHYNv%2bJq786feRmH4fnZseJnp5gdj5KJDpIj45WK/FD1E/JtJNUgCUom%2bDBEvOploxQMVKtZQPKpVcgIYl4rrrrsINd9yMeDWFZY8J/iI5sFIOwWSKpG0BbLVG7U1Bd1cfbr35Nlx91TW47bbbcfHFF%2bMXP/857rzvXhI%2bqxTUBJK5PGTSBmMLs3jj7Q9QTJbxzistZLH/gJWlUfyO/q8nrr8cheVulNJB%2bnsSPhtl3%2bMiE5PBwuIMfvvI/WR1P4%2bPNm3Saj9rNYOfGoPY1Ybqvi1Qdn0A57bX8dlP/xPmd70Ix8hm/PTHX8d/nvNtjPe1ECtP1IVAK5XAXsjJgySEchsBkEqxJo5xM7VSgAIQUEpEPmowDPODeOPV5yGX/EQ4FgSjNrjocIRtMPhs8KTDWLObcbj/KJaNRnzve9/T5g9uvfkW%2bAmizU8/ikWq62jSBltgHZ6IF1NOAzzRINJOD6677DI8%2b8QTWDtOLfYk6f%2bpDhR8RjI3WWpxMVj1q0gF/IhRW140TMFnGsdwz1aMj/YiYjWCGzwC4fABiJ2t4LtJQXbtR/XQdrx25/VIzVFJBchL2NvQs%2bcZrA5TAGJt9aqVlCApSyUyRSSY3dgSw0SsTVzOyyiVCLUTv8Jm/eAZN2qVEOpsRHsu5RyoUSD4nB9cPohKzku9144sE0AgH8G0y4QjR47jhedfoAx9hGiFWmWZkFTxQkiva5MihcQ6fIFVuB1zMFvn0TfcjcuvvwoH33oFWOlHxbOMIg28lIiAiYWo/tfpMxFs3bkZmz58BVxwEax1kviCLHNfB%2bT2vZBI/YmdByAc6QLXR4qy/SMKZhdqi10oWY%2bi4qfgpqkdRveCc2yrcwuvy1inzxhHmnXcKQRU0s4myjwFIAqWCSjqgHltRidJUjSGetmrveZyLoKmGxz5fKnghVzwg0oHlqgdSx4b2JI2pwhZqcOd8pM3p%2bsYB9Wwi1qanQQOydfAArW2RTJBY2Ai8/A7JlCcO4TlwU2YXRpDhJCV8rs0wZMnPWJ3GNBzZDtuufJn%2bOnZ38MZpErfv/8eoKcNYsdu1Pr7IHV3Qug%2bCK51K/i974Pt3o2K6SiK3kOo%2brahGiBPEaLgeNrrwvIbMqz7wRt6m3VCfmNpjCtFmwTGxchFLwXAra7h06ADmDjRg7bd7yFkGyMkeLUJDjbtgsjYqVRI71MQKowVs1497CSfWTI%2b6hHNprGvcy/2fPQaJDIh5bgRfMZCVaUH418An1pFwT8OzxJp/ewy%2brY8jxuuvRAnju2EzTKCublBzC1NwEV%2bf5aMUna4E3IP%2bXuyuHNvtMC7fStqx3q02lezL/aQhD7cAfHQLiL43TAf34uondxlcD%2bE8AFIURJBCer9nr11wUoICO6BaNvfrJOKno19AlykScq7mArB2xV1KF7KaJYGaFobwSMP3IFvn/ENLE0dhcoRlYyHSsJD0HSBz7qRSJox7V0Hx3OIhcOkDQTMrC%2bRjb4Yk0MdBH8Lwd9Asnad/P8SCqFliOllQsAUnnz4Nvzq6p%2bjdfMLcKntz9aPhOkIUp6TcBh7MTTUisgxyuwgccORVnCUkPriceoUwyjM9KGySGWzPADWPA52fRwVyzjCxpMYHOuFb%2b0w6t5eyMF%2b1EKkL3xD4B0H6oL9IxnJdnVVmQKQt290gYqrSczZGVfchvVwUAmnc3BSC8qxWZjIvm7%2b6E1YTZNU%2b16IeZUfvMTU6rSXF14qiR29Hbj7zjvx1JNP4o9PP4PO/k7Swn5qJEFqU2ZUExSAlJF6tZ4s8BK4%2bCL5bnJw/hH8/pHb0Lf/bXq9Av9KL9I2ksXhk3DpOzA500VImULWO4E8OUhRXV8ITSDjpgD4J1EOTqMUmEY5PAPGM47g%2bgki1zEszh5CeOB91KfIWS51QlzrRbV/K4TF1rpk3SUjSiUQHyYvkHee8gKxpkzaxswHLIhnCtrK0InhcSyvrGszOxxkhAtxBCIOIj0PUnF15dgGIe%2bDI%2b7B6NwkOvbvJ7HCYGp1DjfefC2eeuxB%2bC0TELJO0vZ6CGoJpCyUfT3K0TUsjx9EiQQPpQ1gLWR6TiJuGUTZN4icbxRL%2bhFEbEPEocPgaIAOQkjbtlex78OXELWehEA%2boeg%2bQdePo%2bgZQ9JKh2MKObK6jtkuZI7Q4Ht2gu94B8LRraj07IAwsq8uL7bL8LaB93U262Ip26kAFJv0/jXGSlqar9YUdSPU7OyypuhuveU26uuXouNQFyqSDGciDHOYBMy84F8AABBuSURBVFPMRXrAgRWPGelsQl1PIfmahZHEVLXkQwupu3vvvAnVtIngb0ApZgCXcVD90%2bvsOt762%2b9xzeXn48ZrL8OhHS%2bh6BtBVE9kRdlfXT%2bOheVecKE5Qoweuz/8K5546Hac%2b%2bPv4ZFfX4uH7roOUcsxVCgwRe9JUnuDSDknkXecAEOB9I8dQqFzP7gOYv5tb4ElgVXZ%2bS74fe/XpR5CwHIbpPW2Zt28x6gFoN8%2b3rTiszElkq0CX1c4EjeqgfF6fejr7cWWTZuxvLiy4fJI4xfJNKULJXjTSSz77VgJ2hHNxOGMemANE/uX1ZlZsqoRI2Wd%2bCFtRUklwqxDmx4vEgKktAGTxO4fvPY0RnrfRzU4ipJ7AGHPEI7MdWFm5Sji3hmkCP5//eNv8NHrz%2bLs736TWuEo7r31Crz%2b/CNUNsvIOU8ibRmigY%2bg4BiG3zSE6YEDSG/9AOzWD8l8fYDyVvr%2b/VvB7d5UF1qJA8xDKLiPNutW/BslsHn6SJM7HtPmA9RdYPlcmdweo7m9jx9UGBVtEkTQvL26X0i1wiWWR4TkbpA0%2bVrABX3QgxgJmUTMTXZ2nboAkV/SiWLcopVBMapyAYmYtJkMiR6ouwmAS%2bTOqLYDI5jQH4WXghhPxrBMWiEcXsXvHrwVZ37zdKyOqxuqFvF9CsTu954nm7uIjLkfWecEDYh4wTEA0/whnCBfUejvBfteC6oUBHbbh6i2baMAbK5XO/fKgdVjWDSTDsgVy1oAfPFYU7nCaQHgOFHJZctgsuT3KRDaXr/ahg3OpBnS/ywZG35jLpATNDeo7gEs5KkFkt5P58vwJeMwBW3IxkxgqQ3madBiWm2FZGroPYHe4zI2iqgDCyN7kXKNkTlZhN5yEs6gC4K6z4jsc6lYRiKdwpHhPszNH4dUdKGdIP36i0%2bBDc6CcY0jYVYHfgI59whS1n4YFw5jfnkS1dFh8K27wLbvB/tBC8rvvIry9s310ki/XKFSTaYS6sqQeGpprNYk8AKjrfxysqLCX31kyY7Ozy9rZqdaFbRdX%2bqhujtBkLTZoWKhrG2enBgnrU4GR5tEJZ44PHQc4VCUZHMcroAbpZRLOypJK7VTH2XqOHZ%2b%2bDIuPO/HiDsmYXeNYtG2Qu6RR1VdkyirE6kCqmS%2buLKAYDyKddsyjIZR5EMkpogfEkSGafsYSsElZLzLYNzzWFzoxcwiBXTwONjtm8Ee2A1ux3sob3oXxY7WesnnksnAqCtL6trgxnxArV5rosEw6pJ3jskr6hJZb%2b8xPPbYE/jpT8/DAw88SBL3L6cQoC6MUoZ4AQxTQiLBEFJYbUrsIvIBz/75z7j9oftxx%2b13kZ3NYN3kwdSimdop%2bQi7FQ6nC4GAD8lkEP9JVvisM74Oi3EIS%2b5FpLI5bXJFDbC6%2bhyNREluZwgNnLZfQd13aLSbYHUtwetYQMg6BVZ1jtQiC54pKoMJjE92YGFhjBh/ENVdW1Hd/A64995C5c1XUVqZrxdScVnIZ5Dwe/5rcVRRak0cV2PUld9CoaIk4mmysy9i374D%2bMEPztZ2f6jrgr29R7UMV6vqqhFPAcnT4CvahEcymcHPf/ZzfPFrX8Gegx30Ok8iKQWzngbuIDOVymkLq7b5FUTmVvDC317F5z//Oezd1oJZapdOMj2qZVYHrgY4Fo3D5/UTGsrIpTO4/bbbsP2jrXj4wYexdct2%2bMIBTK6MUUAnqW1OokRHxjmM4dGDcDjM4EaohW6n2m/dieqBPahQSRRTiXoplZS5PAOfw67uENmYExSFehM9Z9QsFoucok50PExwVldUJidmCJY1fOc730VX18bEaLksUhA2doOqK8XqY/u2nfjbG29geHWG5HEG%2bRSDbCSJRChOgcghmS/ARTCOkMOrRdKEqOdxxje/iqm1CfRPjFCn%2bUj7nkpZ3XtQRSySIB4qaIss2USKHObNuOmmG7W5hjdfe10j5WgsCht5kNnVEThMA6Q7RnFkrBshtxVc72Ea/C5w%2b7ahMjWCYiatzh3WixQAdZ9TJkkcUK1ucAC1vSaWFRh1uouyqaiBGB4ehcVi025K3Svwpz89D3XNUG2DLKugopIUmR%2b2ImtL6VaLExdfeTnO/fl5ePbR35Iic1BGPEROLiQDZGoiAVi9IYTdAUSjREIuIy78%2bTnY0bGPSu1xcpCbN9bw8yyRX1ULhEq4ajDKxDN/%2bP3GIsfPLrwQJv0aitRpqoUKHSxCoRAMlmUKZA96TnYi7jSDJQRw5BQrhICw2YQ8obGUTtcpELJcZZFVA5DJ5DbcYKXSRG2PKRTUuT5RUSGtdT6KcplaX5xKQp33UwOk7viqaAgQKRAiVM3AqWigoE2TCnznjdewc28rGIJ0PhQmePqQ8weRpPaYDidgC1JZuCPwBrxoPdKJm2%2b%2bTVt7ULfXlktlhINRbcJVQxcFWFFvhUj2L3/%2bC%2b6%2b625cftllOPcnP4FxeQVilYJDgeCJmCu5EvR2I0YXRuj/Jc9yiNTeB28hQ2RsMxqQS8RRYhgKQFbOqFNtTmezLhBLaQHwhqNNoXiGCWSyiKaziroMXqHMiqeWx7U9UzRAdcAaAij76gRpmV5X6EY5vg5bPIJZE2WGoZqlLDKxJLFzGAyRVp6CkSJrm/a5EfOG4Q8lsOTzIpzLfywziI%2b06fZYNEEBSGsIUHWG3erG1VddjZtuvAnTE1P43Oc%2bh%2bO9RxD2BalDsIj61O%2bOgitQifkcmDcuoBJLgG3djSohIOVyI%2bDxUEmm6N4YIsGUzMQTCHi9zTqDf%2bMHE6OO9SZr0MbYw1asB1xKlQbp9UTQ3PwYDh7swosvvoyRkfGNGiWizBEsE0yervUilM6iQEGYs%2bphm55CxO6FJ5yEK5xCKBBH1kdlEHaQKvQg6ycUeKwkn01wE0%2b88cbbmJmZR1/fMa2U1J3o6pJ8kaCtIk/dg7R3735tjfI39z%2bAPAmuc/7vOXj2D3/Ef3zrWzAbLYiGIuRCoxSMEtbtBiwZF1HNFVE5cgyl2XlkqYsU1YM6TInJ1YvpjFwlPooGg8QBuY29wkze3iTkLEw%2ba8G0fUVJUs25nH7NC9x77/1a7W3ftkNFIvQ0oDXKXpICkM4X4Y7FYImGMGVZQ8jvQIrg5qasWd0huIkEA2E7tZ9hlB2kAO0eeKwGmAkNgVCMfMatcLl8OO%2b8C6jMMtq%2bI7X8qlorlKntFanT5BAMhLC0uKr9UGNifAoPPfRbbdne5/AiRUirqhu3qAxOzo%2bQVjCBD8aQO3qckuGEgUol5len0ikAmVydykCWOV7dg6i6Qeup3wdFm4SskZEK69C7lhQzkQqTKeAuqjl18OddeAFmiL0dBHMPDbhQ4rXJUInkcDiXxYTLDG88jgyRViiTRIzq3u%2bjzEQiSNpXkFuZRSrhQyDox6J1DUQj6DzUgyuvvhpuqsdvU7fx0fVqyakIU7tMpSzRIWikmKV7UXeoVzZ2sX38qJRYFEiLsHkOOeoYY8vj8AcDZLfTKAbC9P9Tcozr1IIz6uBRKZTq8UhULlHpceVKs66S3Pi1WDVpbCol1plaieoluq4sEExlivZLL/0VF1x2MX55683aYbW51H1I2joAd2q%2bX%2bUFWzIKazxMryXiBioRItMUU6F6ztCgyUano3AX4zjpN2GR6jTHc9hOvfnOO6%2bH0zOL07/2VVioY6hdRt1wzbKytqpUIIHFUjBYTRarClHQtuGriAgRWWaJM7Q1B3o/Qok5sXSCkBTVEKEuy%2bdp4BlCSIUkdVlVsdlcfXVhUVYDUimWKACnfi/ApRebyiljTiw4iU0dyqxpqX7rnXfhxjtuw65DB/G5z34W27bsQDFf1TZIqvK3Qjeo3my1UgNDN2GK%2bhFIJpGmmy6W6KbLMjI5HuFUCeEsQwO3Yco%2bB6dPj3h4CanwInWKk4hY%2bnDmWWfCSHKZF2QN/urKc0rd0k5loQZYW2ilklCX41VdECeiLJLnKJJX4QgxqkmbMkxheHEQeXWtgJyqCnmGyJBYH%2bUcIShfqBMP1BPhqKyIkvr6UeIAx6n5ANMnSxmnmy8FwRQ9ynMvv1D/jzPPrD/2%2bJPwuMM4%2b%2bwfor39IC695FLNH6gkpUKT15a/ZK0cGIrypF2POacJqzQYWzQCJ/X%2bQNSFIB3xyArKiQXwyTlIyVkI8RnNCe758M9ofuQOOFJObQuuOlh1M8Yi6YQ11zpsERfsYbLZIS8CiQhdk4Ij5EeMzn4qyQgFfd1jxv6TewkBgygzBPVcTmN9u8WCNJVmJZevl7LZOv2tTvCvcdRu2VLpZh1b8OvcUfM/qEFIZhzvxkpR2ENBoVAR6kRO9bExbU9Afcvmj%2bqXX3457rvvflJnRW05LP2xLyDYklLMEQqMYR9mnGtYdC7A7l9Dgny/usIrZpYgZxchZWbICs%2bhEl%2bAxJBNjq/gzVeeRNwzjnDCDBcFrUJGyOh3Yc0%2bTfBdIV0wC49/AS7vIknjeULQAmyk%2bU2OMWL8IejJDU4u9aB3fB/GVk6AJQSoAcgmEgj6fPVMIlkvFwp1FQHZeEKOBYPq%2b2m5Jn9Wy747GdJ%2bNDXs0v9LIl/wapsg2FqN%2br4qQSQmk5NqsiZHtEMSZKlUqki5fElKF8uSK5mQ3BGv5AmtS4GwXmKi8xKfmpdkZk2S8%2buSlFmRqMNIQmZZElMzEpdcltjYLL2/IOWii1I%2bPCXJ9LyS0Utmv1Xyh%2bKSye2QXL4VqcasS2J2nb6Lzmm9VI7ppWrKLPHJWYmLnJS42IxUiU1KVTpW9V3SsmVB4vJ5qcxkpWI2I6VCQSkTj0mVQkEq5/OyuoCqLqHbzab7Nmq/sDErnCwwnzi1T%2bDfyd/PKNL/IFtyesr/eK22w1iFtD6RZrXqBkQLhcZM0lF9TjGU6Fxz0AfpfZnO9SApHRe9T0fNSSxqpOcm%2bpud1BU95%2bl6kGKshBAvFeFnksjk6VolQNfT99XoLPkpM3Tm6TVH38mtQ932DladV1iHJUCIySf%2b6w7V/T4y%2bRRF3pjNEYm0C7lcOZ97QPuNZLF0mo5Ju3Tzno3f0KYK2Y9/NisKwuU8J7xIlvc1SZJbymW2JZlIt5BTaxGFWku2xLYYvNaWTGyhBcXVFqWw2iLnDS1ibr0ll3S0lBKGFolZa5GSE3RebxEL9F7S1FJN6%2bn1SgufWW4RsmstIqOna/UtBfqbmDO3ZFLWFlPA06L32Vu8Afp8zt7CM%2bYWPr3WUs2YW4pJa0s1a6P3HC1c1qB9X9o93RLzzrUsWiZaQiFPC18stFTyuZZKNt1SyTHacxp0C1sqPCCWCv%2bqjo9E0GmFUyvjuiqn/iq8fmrg8icMUej%2bNz%2bIGz6xbtT/f7%2bslmQdf2q/EHlyHRmTTwic0EAoaBAEqYFqviGdzjawLN8g8nJDpsQ2rPvtDanYUoOUW2kQc3RmVulsbCgkrQ2VpF57LSUnG6SsoUHM2xvKyfUGLr1G76808OmFBiGz0iBkVxtKidWGIv1NzJkakklLgyXgbdD7HA3eAH0%2bZ23gGRNdr6fPmug6S0M1Q%2b9l6cis0nurDYx3piHpn2tYMI82BEPuBr5UbKCMN1SyqYZKLttQUZ8Xcg1sMf8PXDF/WhnQsUGvjisVdf8PTf%2bBq9tLSGoAAAAASUVORK5CYII=' /%3e%3c/svg%3e" width="54" data-src="/karuta-yomi/assets/static/app-icon.80c9a0b.865acb4a6ee735c1683eea832a20ce8f.png" data-srcset="/karuta-yomi/assets/static/app-icon.80c9a0b.865acb4a6ee735c1683eea832a20ce8f.png 54w" data-sizes="(max-width: 54px) 100vw, 54px" class="g-image g-image--lazy g-image--loading"><noscript><img src="/karuta-yomi/assets/static/app-icon.80c9a0b.865acb4a6ee735c1683eea832a20ce8f.png" class="g-image g-image--loaded" width="54"></noscript></a><div class="v-toolbar__title"><a href="/karuta-yomi/" class="active"><h1 class="display-4">かるたよみ</h1></a></div><div class="spacer"></div><div class="actions"><div class="v-menu"><button type="button" class="v-btn v-btn--flat v-btn--icon v-btn--round theme--light v-size--default"><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate uil uil-ellipsis-v theme--light"></i></span></button><!----></div></div></div></header><main class="v-content" style="padding-top:64px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container" data-v-e31a8722><section id="prep" class="contents" data-v-e31a8722><h2 class="display-3" data-v-e31a8722>いろはかるた 江戸</h2><div class="description font-weight-medium" data-v-e31a8722><div data-v-e31a8722>いろは47文字に対応した最も古典的なかるた。
+ことわざを使っているが、内容は江戸、京都・大坂など上方、尾張などで各々異なっており、地方の特色が表れて、「郷土かるた」も各地に存在する。「犬も歩けば棒に当たる」で始まるものは、江戸かるた（犬棒かるた）である。</div><div class="credits" data-v-e31a8722><div class="body-2" data-v-e31a8722>CC-BY-SA-3.0 <a href="https://ja.wikipedia.org/wiki/%E3%81%8B%E3%82%8B%E3%81%9F" data-v-e31a8722>Wikipedia - かるた</a></div></div></div><form novalidate="novalidate" class="v-form font-weight-bold" data-v-e31a8722><div class="row" data-v-e31a8722><div class="col col-12" data-v-e31a8722><div class="v-input v-input--dense theme--light v-input__slider" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><label for="input-277" class="v-label theme--light" style="left:0px;right:auto;position:relative;">読上げ数</label><div class="v-slider v-slider--horizontal theme--light"><input id="input-277" readonly="readonly" tabindex="-1"><div class="v-slider__track-container"><div class="v-slider__track-background primary lighten-3" style="transition:;right:0px;width:calc(NaN%);"></div><div class="v-slider__track-fill primary" style="transition:;left:0;right:auto;width:NaN%;"></div></div><div role="slider" tabindex="0" aria-label="読上げ数" aria-valuemin="1" aria-valuemax="100" aria-readonly="false" aria-orientation="horizontal" class="v-slider__thumb-container v-slider__thumb-container--show-label primary--text" style="transition:;left:NaN%;"><div class="v-slider__thumb primary"></div><div class="v-slider__thumb-label-container"><div class="v-slider__thumb-label primary" style="height:24px;width:24px;transform:translateY(-20%) translateY(-12px) translateX(-50%) rotate(45deg);"><div><span>undefined</span></div></div></div></div></div></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div><div class="row" data-v-e31a8722><div class="col col-12" data-v-e31a8722><div class="v-input v-input--dense theme--light v-input__slider" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><label for="input-281" class="v-label theme--light" style="left:0px;right:auto;position:relative;">出題間隔</label><div class="v-slider v-slider--horizontal theme--light"><input id="input-281" readonly="readonly" tabindex="-1"><div class="v-slider__track-container"><div class="v-slider__track-background primary lighten-3" style="transition:;right:0px;width:calc(NaN%);"></div><div class="v-slider__track-fill primary" style="transition:;left:0;right:auto;width:NaN%;"></div></div><div role="slider" tabindex="0" aria-label="出題間隔" aria-valuemin="1" aria-valuemax="5" aria-readonly="false" aria-orientation="horizontal" class="v-slider__thumb-container v-slider__thumb-container--show-label primary--text" style="transition:;left:NaN%;"><div class="v-slider__thumb primary"></div><div class="v-slider__thumb-label-container"><div class="v-slider__thumb-label primary" style="height:24px;width:24px;transform:translateY(-20%) translateY(-12px) translateX(-50%) rotate(45deg);"><div><span>undefined</span></div></div></div></div></div></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div><div class="row" data-v-e31a8722><div class="col col-6" data-v-e31a8722><div class="v-input v-input--dense theme--light v-input__slider" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><label for="input-285" class="v-label theme--light" style="left:0px;right:auto;position:relative;">発話速度</label><div class="v-slider v-slider--horizontal theme--light"><input id="input-285" readonly="readonly" tabindex="-1"><div class="v-slider__track-container"><div class="v-slider__track-background primary lighten-3" style="transition:;right:0px;width:calc(NaN%);"></div><div class="v-slider__track-fill primary" style="transition:;left:0;right:auto;width:NaN%;"></div></div><div role="slider" tabindex="0" aria-label="発話速度" aria-valuemin="1" aria-valuemax="100" aria-readonly="false" aria-orientation="horizontal" class="v-slider__thumb-container v-slider__thumb-container--show-label primary--text" style="transition:;left:NaN%;"><div class="v-slider__thumb primary"></div><div class="v-slider__thumb-label-container" style="display:none;"><div class="v-slider__thumb-label primary" style="height:24px;width:24px;transform:translateY(-20%) translateY(-12px) translateX(-50%) rotate(45deg);"><div><span>undefined</span></div></div></div></div></div></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div><div class="col col-6" data-v-e31a8722><div class="v-input v-input--dense theme--light v-input__slider" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><label for="input-289" class="v-label theme--light" style="left:0px;right:auto;position:relative;">声の高低</label><div class="v-slider v-slider--horizontal theme--light"><input id="input-289" readonly="readonly" tabindex="-1"><div class="v-slider__track-container"><div class="v-slider__track-background primary lighten-3" style="transition:;right:0px;width:calc(NaN%);"></div><div class="v-slider__track-fill primary" style="transition:;left:0;right:auto;width:NaN%;"></div></div><div role="slider" tabindex="0" aria-label="声の高低" aria-valuemin="0" aria-valuemax="20" aria-readonly="false" aria-orientation="horizontal" class="v-slider__thumb-container v-slider__thumb-container--show-label primary--text" style="transition:;left:NaN%;"><div class="v-slider__thumb primary"></div><div class="v-slider__thumb-label-container" style="display:none;"><div class="v-slider__thumb-label primary" style="height:24px;width:24px;transform:translateY(-20%) translateY(-12px) translateX(-50%) rotate(45deg);"><div><span>undefined</span></div></div></div></div></div></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div><div class="row" data-v-e31a8722><div class="col col-6" data-v-e31a8722><div class="v-input switch v-input--dense theme--light v-input--selection-controls v-input--switch" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><div class="v-input--selection-controls__input"><input aria-checked="false" id="input-293" role="switch" type="checkbox" aria-disabled="false"><div class="v-input--selection-controls__ripple"></div><div class="v-input--switch__track theme--light"></div><div class="v-input--switch__thumb theme--light"><!----></div></div><label for="input-293" class="v-label theme--light" style="left:0px;right:auto;position:relative;">シーケンス</label></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div><div class="col col-6" data-v-e31a8722><div class="v-input switch v-input--is-disabled v-input--dense theme--light v-input--selection-controls v-input--switch" data-v-e31a8722><div class="v-input__control"><div class="v-input__slot"><div class="v-input--selection-controls__input"><input aria-checked="false" disabled="disabled" id="input-297" role="switch" type="checkbox" aria-disabled="true"><div class="v-input--selection-controls__ripple"></div><div class="v-input--switch__track theme--light"></div><div class="v-input--switch__thumb theme--light"><!----></div></div><label for="input-297" class="v-label v-label--is-disabled theme--light" style="left:0px;right:auto;position:relative;">表記読み</label></div><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div><div class="row" data-v-e31a8722><div class="col col-12" data-v-e31a8722><div class="v-input v-input--dense theme--light v-text-field v-select" data-v-e31a8722><div class="v-input__control"><div role="button" aria-haspopup="listbox" aria-expanded="false" aria-owns="list-301" class="v-input__slot"><div class="v-select__slot"><label for="input-301" class="v-label theme--light" style="left:0px;right:auto;position:absolute;">音声</label><div class="v-select__selections"><input id="input-301" readonly="readonly" type="text" aria-readonly="false" autocomplete="off"></div><div class="v-input__append-inner"><div class="v-input__icon v-input__icon--append"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu-down theme--light"></i></div></div><input type="hidden"></div><div class="v-menu"><!----></div></div><div class="v-text-field__details"><div class="v-messages theme--light"><div class="v-messages__wrapper"></div></div></div></div></div></div></div><div class="row" data-v-e31a8722><div class="col col-12" data-v-e31a8722><button type="button" class="v-btn v-btn--depressed theme--light v-size--small primary" style="width:100%;" data-v-e31a8722><span class="v-btn__content">開始！</span></button></div></div></form></section><!----><!----></div></div></main><footer id="app-footer" flat="" class="v-footer v-sheet v-sheet--tile theme--light v-footer--fixed transparent" style="left:0px;right:0px;bottom:0px;"><div class="spacer"></div><small>© Since 2020 <a href="https://riotz.works">Riotz.works</a></small></footer></div></div>
+    <script>window.__INITIAL_STATE__={"data":{"game":{"title":"いろはかるた 江戸","description":"いろは47文字に対応した最も古典的なかるた。\nことわざを使っているが、内容は江戸、京都・大坂など上方、尾張などで各々異なっており、地方の特色が表れて、「郷土かるた」も各地に存在する。「犬も歩けば棒に当たる」で始まるものは、江戸かるた（犬棒かるた）である。","credits":[{"license":"CC-BY-SA-3.0","author":"Wikipedia - かるた","link":"https:\u002F\u002Fja.wikipedia.org\u002Fwiki\u002F%E3%81%8B%E3%82%8B%E3%81%9F"}],"configuration":{"lang":"ja-JP","count":null,"interval":null,"rate":null},"introduction":null,"cards":[{"text":"犬も歩けば　棒に当たる","read":"いぬもあるけば、ぼうにあたる"},{"text":"論より証拠","read":"ろんよりしょうこ"},{"text":"花より団子","read":"はなよりだんご"},{"text":"憎まれっ子　世にはばかる","read":"にくまれっこ、よにはばかる"},{"text":"骨折り損の　くたびれ儲け","read":"ほねおりぞんの、くたびれもうけ"},{"text":"屁をひって　尻すぼめる","read":"へをひって、しりすぼめる"},{"text":"年寄りの冷や水","read":"としよりのひやみず"},{"text":"ちりも積もれば　山となる","read":"ちりもつもれば、やまとなる"},{"text":"律義者の子沢山","read":"りちぎもののこだくさん"},{"text":"盗人の昼寝","read":"ぬすっとのひるね"},{"text":"瑠璃も玻璃も　照らせば光る","read":"るりもはりも、てらせばひかる"},{"text":"おいては　子に従え","read":"おいては、こにしたがえ"},{"text":"破れ鍋に綴じ蓋","read":"われなべにとじぶた"},{"text":"かったいの　瘡うらみ","read":"かったいの、かさうらみ"},{"text":"葦のずいから　天井のぞく","read":"よしのずいから、てんじょうのぞく"},{"text":"旅は道連れ　世は情け","read":"たびはみちづれ、よはなさけ"},{"text":"れうやくは　口に苦し","read":"りやうやくは、くちににがし"},{"text":"総領の甚六","read":"そうりょうのじんろく"},{"text":"月とすっぽん","read":"つきとすっぽん"},{"text":"念には　念を入れよ","read":"ねんには、ねんをいれよ"},{"text":"泣きっ面に蜂","read":"なきっつらにはち"},{"text":"楽あれば　苦あり","read":"らくあれば、くあり"},{"text":"無理が通れば　道理引っ込む","read":"むりがとおれば、どうりひっこむ"},{"text":"嘘から出た真","read":"うそからでたまこと"},{"text":"いもの煮えたも　ご存じない","read":"いものにえたも、ごぞんじない"},{"text":"喉元過ぎれば　熱さを忘れる","read":"のどもとすぎれば、あつさをわすれる"},{"text":"鬼に金棒","read":"おににかなぼう"},{"text":"臭いものに　蓋をする","read":"くさいものに、ふたをする"},{"text":"安物買いの　銭失い","read":"やすものがいの、ぜにうしない"},{"text":"負けるが勝ち","read":"まけるがかち"},{"text":"芸は身を助く","read":"げいは、みをたすく"},{"text":"文はやりたし　書く手は持たぬ","read":"ふみは、やりたし、かくては、もたぬ"},{"text":"子は三界の首枷","read":"こはさんがいのくびかせ"},{"text":"えてに帆を上ぐ","read":"えてにほをあぐ"},{"text":"亭主の好きな　赤烏帽子","read":"ていしゅのすきな、あかえぼし"},{"text":"頭隠して　尻隠さず","read":"あたまかくして、しりかくさず"},{"text":"三遍回って　煙草にしょ","read":"さんべんまわって、たばこにしよ"},{"text":"聞いて極楽　見て地獄","read":"きいてごくらく、みてじごく"},{"text":"油断大敵","read":"ゆだんたいてき"},{"text":"目の上のこぶ","read":"めのうえのこぶ"},{"text":"身から出た錆","read":"みからでたさび"},{"text":"知らぬが仏","read":"しらぬがほとけ"},{"text":"えんは異なもの　味なもの","read":"えんは、いなもの、あじなもの"},{"text":"貧乏暇なし","read":"びんぼうひまなし"},{"text":"門前の小僧　習わぬ経を読む","read":"もんぜんのこぞう、ならわぬきょうをよむ"},{"text":"急いては　事を仕損じる","read":"せいては、ことをしそんじる"},{"text":"粋は身を食う","read":"いきは、みをくう"},{"text":"京の夢　大阪の夢","read":"きょうのゆめ、おおさかのゆめ"}]}},"context":{}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script><script src="/karuta-yomi/assets/js/app.f5ff011d.js" defer></script><script src="/karuta-yomi/assets/js/page--src--templates--game-vue.541922cd.js" defer></script>
+  </body>
+</html>
