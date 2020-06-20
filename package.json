@@ -6,13 +6,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rimraf node_modules/.cache .cache src/.temp dist",
+    "clean": "rimraf node_modules/.cache .cache src/.temp dist .lighthouseci",
     "setup": "yarn install --ignore-optional",
     "dev": "gridsome develop",
     "build": "gridsome build",
     "explore": "gridsome explore",
     "lint": "eslint . --ext .js,.ts,.vue --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
+    "lhci": "lhci autorun",
     "deploy": "gh-pages -d dist -b master -m 'Update Site [ci skip]'"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-json": "^0.2.1",
+    "@lhci/cli": "^0.4.1",
     "@types/node": "^13.11.0",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",

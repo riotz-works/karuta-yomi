@@ -4,7 +4,7 @@ executors:
   default:
     working_directory: ~/workspace
     docker:
-      - image: circleci/node
+      - image: circleci/node:latest-browsers
     environment:
       TZ: /usr/share/zoneinfo/Asia/Tokyo
 
@@ -66,6 +66,16 @@ jobs:
       - store_artifacts:
           path: dist
       - persist
+  lhci:
+    executor: default
+    steps:
+      - attach
+      - run:
+          name: Lighthouse
+          command: |
+            yarn lhci
+      - store_artifacts:
+          path: .lighthouseci
   deploy:
     executor: default
     steps:
@@ -91,6 +101,9 @@ workflows:
       - build:
           requires:
             - setup
+      - lhci:
+          requires:
+            - build
       - deploy:
           requires:
             - build
