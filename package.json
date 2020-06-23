@@ -21,7 +21,7 @@
     "vuetify": "^2.2.20"
   },
   "devDependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.0",
+    "@gridsome/plugin-google-analytics": "^0.1.1",
     "@gridsome/plugin-sitemap": "^0.2.3",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-json": "^0.2.1",
