@@ -2,7 +2,7 @@
   <v-app id="app" :style="wallpaper">
 
     <v-app-bar id="app-header" app flat fixed color="transparent">
-      <g-link to="/"><g-image src="~/assets/app-icon.png" width="54" /></g-link>
+      <g-link to="/"><g-image src="~/assets/app-icon.png" width="54" :alt="$static.metadata.siteName" /></g-link>
       <v-toolbar-title>
         <g-link to="/"><h1 class="display-4">{{ $static.metadata.siteName }}</h1></g-link>
       </v-toolbar-title>
@@ -10,7 +10,7 @@
       <div class="actions">
         <v-menu left offset-x nudge-left="-8">
           <template v-slot:activator="{ on }">
-            <v-btn icon v-on="on"><v-icon>$menu</v-icon></v-btn>
+            <v-btn icon aria-label="メニュー" v-on="on"><v-icon>$menu</v-icon></v-btn>
           </template>
           <v-list dense class="menu">
             <v-list-item v-for="(item, i) in menu" :key="i" gridsome :to="item.action">
@@ -133,6 +133,7 @@ export default Vue.extend({
     padding: 3px 0 0 0;
   }
   .actions {
+    margin-top: -6px;
     padding-right: 2px;
   }
 }

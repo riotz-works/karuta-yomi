@@ -3,6 +3,7 @@
     <v-container class="contents">
 
       <section style="height: 0">
+        <h2>『かるたよみ』につて</h2>
         <div>
           <p>
             『かるたよみ』は、音声合成による発話の機能を使って文章を自動読み上げする機能を使い、カルタ遊びの読み手を担うアプリです。

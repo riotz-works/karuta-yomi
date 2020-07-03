@@ -106,6 +106,7 @@ workflows:
             - build
       - deploy:
           requires:
+            - lint
             - build
           filters:
             branches:
