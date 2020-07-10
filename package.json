@@ -14,7 +14,7 @@
     "lint": "eslint . --ext .js,.ts,.vue --ignore-path .gitignore",
     "lint:fix": "yarn lint --fix",
     "lhci": "lhci autorun",
-    "deploy": "gh-pages -d dist -b master -m 'Update Site [ci skip]'"
+    "deploy": "gh-pages -t -d dist -b master -m 'Update Site [ci skip]'"
   },
   "dependencies": {
     "vue": "^2.6.11",
